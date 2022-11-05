@@ -136,8 +136,8 @@ nav:
   about: /about/
   articles: /archives/
   LINK_NAME: URL
-  tag: /tags/
-  category: /categories/
+  Tag: /tags/
+  Category: /categories/
 
 social_links:
   github: https://github.com/iasnobmatsu

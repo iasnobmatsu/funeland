@@ -1,8 +1,8 @@
 ---
 title: Web Scraping with Python Using MyAnimeList as An Example
-date: 2022-11-04 19:20:29
+date: 2020-12-30
 categories: 
-- [algorithms]
+- [data science]
 tags: [python, web scraping]
 ---
 

@@ -16,9 +16,9 @@ direction: ltr
 nav:
   home: /
   about: /about/
-  posts: /archives/
-  categories: /categories/
-  tags: /tags/
+  Posts: /archives/
+  Categories: /categories/
+  Tags: /tags/
 
 
 # Links to your social media accounts.
