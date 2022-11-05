@@ -5,8 +5,8 @@
 
 # footer ??
 footer:
-  powered: false 
-  copyright: AAA南瓜种植户
+  since: 2020
+
 
 
 # Site
@@ -104,7 +104,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: cactus
+theme_config:
+  colorscheme: white
 
 plugins: hexo-math
 
@@ -135,11 +137,19 @@ menu:
   home: / || fa fa-home
   archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-tags
+  categories: /categories/ || fa fa-tag
 
-sidebar:
-  avatar:
-    url: avt.png
-  social:
-    GitHub: https://github.com/iasnobmatsu || fab fa-github
-  
+nav:
+  home: /
+  about: /about/
+  articles: /archives/
+  LINK_NAME: URL
+  tag: /tags/
+  category: /categories/
+
+social_links:
+  github: https://github.com/iasnobmatsu
+
+copyright:
+  start_year: 2022
+  end_year: 2022
