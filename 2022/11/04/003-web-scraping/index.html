@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"iasnobmatsu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Disclaimer: The following code for scraping MAL was written on Dec 30th, 2020. MAL data structure may have changed after that.  Scraping Static HTML: Using MAL Top Animes as An ExampleImport libraries">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web Scraping with Python Using MyAnimeList as An Example">
+<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/index.html">
+<meta property="og:site_name" content="A Blog From Nowhere">
+<meta property="og:description" content="Disclaimer: The following code for scraping MAL was written on Dec 30th, 2020. MAL data structure may have changed after that.  Scraping Static HTML: Using MAL Top Animes as An ExampleImport libraries">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/!--swig%EF%BF%BC12--&gt;/images/MALscrape/static.png">
+<meta property="og:image" content="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/!--swig%EF%BF%BC13--&gt;/images/MALscrape/dynamic.png">
+<meta property="article:published_time" content="2022-11-04T23:20:29.000Z">
+<meta property="article:modified_time" content="2022-11-04T23:37:17.879Z">
+<meta property="article:author" content="iasnobmatsu">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="web scraping">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/!--swig%EF%BF%BC12--&gt;/images/MALscrape/static.png">
+
+
+<link rel="canonical" href="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/","path":"2022/11/04/003-web-scraping/","title":"Web Scraping with Python Using MyAnimeList as An Example"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Web Scraping with Python Using MyAnimeList as An Example | A Blog From Nowhere</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">A Blog From Nowhere</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scraping-Static-HTML-Using-MAL-Top-Animes-as-An-Example"><span class="nav-number">1.</span> <span class="nav-text">Scraping Static HTML: Using MAL Top Animes as An Example</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Import-libraries"><span class="nav-number">1.1.</span> <span class="nav-text">Import libraries</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Helper-Function-to-Parse-One-Anime-Row"><span class="nav-number">1.2.</span> <span class="nav-text">Helper Function to Parse One Anime Row</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Function-to-Get-a-Specified-Number-of-Anime-on-The-Top-Anime-List"><span class="nav-number">1.3.</span> <span class="nav-text">Function to Get a Specified Number of Anime on The Top Anime List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Convert-Data"><span class="nav-number">1.4.</span> <span class="nav-text">Convert Data</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scraping-Dynamic-HTML-Using-MAL-user-list-as-An-Example"><span class="nav-number">2.</span> <span class="nav-text">Scraping Dynamic HTML: Using MAL user list as An Example</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Helper-Function-to-Get-One-Row-of-MAL-User-List"><span class="nav-number">2.1.</span> <span class="nav-text">Helper Function to Get One Row of MAL User List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Additional-Libraries-for-Dynamic-HTML"><span class="nav-number">2.2.</span> <span class="nav-text">Additional Libraries for Dynamic HTML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Get-Dynamic-MAL-User-List-Data"><span class="nav-number">2.3.</span> <span class="nav-text">Get Dynamic MAL User List Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Convert-Data-1"><span class="nav-number">2.4.</span> <span class="nav-text">Convert Data</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">iasnobmatsu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://iasnobmatsu.github.io/2022/11/04/003-web-scraping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="iasnobmatsu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A Blog From Nowhere">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Web Scraping with Python Using MyAnimeList as An Example | A Blog From Nowhere">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Web Scraping with Python Using MyAnimeList as An Example
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-04 23:20:29 / Modified: 23:37:17" itemprop="dateCreated datePublished" datetime="2022-11-04T23:20:29+00:00">2022-11-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithms/" itemprop="url" rel="index"><span itemprop="name">algorithms</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Disclaimer: The following code for scraping MAL was written on Dec 30th, 2020. MAL data structure may have changed after that.</p>
+<!-- To downlaod the ipynb (python jupyter notebook) script I wrote for this post, please click [here](/html_assets/MALscrape/MALscrapper.ipynb).
+
+To download the MAL top 3000 anime list csv file (collected Dec 29, 2020), please click [here](/html_assets/MALscrape/MALtop3000.csv).
+
+To download my own MAL anime list csv file (collected Dec 30, 2020), please click [here](/html_assets/MALscrape/iasnobmatsuMAL.csv). -->
+<h3 id="Scraping-Static-HTML-Using-MAL-Top-Animes-as-An-Example"><a href="#Scraping-Static-HTML-Using-MAL-Top-Animes-as-An-Example" class="headerlink" title="Scraping Static HTML: Using MAL Top Animes as An Example"></a>Scraping Static HTML: Using MAL Top Animes as An Example</h3><h4 id="Import-libraries"><a href="#Import-libraries" class="headerlink" title="Import libraries"></a>Import libraries</h4><ul>
+<li>BeautifulSoup: for scraping</li>
+<li>requests: request html and parse</li>
+<li>re: regular expression for string manipulation</li>
+<li>pandas: convert data scraped into csv files</li>
+</ul>
+<span id="more"></span>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup </span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<h4 id="Helper-Function-to-Parse-One-Anime-Row"><a href="#Helper-Function-to-Parse-One-Anime-Row" class="headerlink" title="Helper Function to Parse One Anime Row"></a>Helper Function to Parse One Anime Row</h4><p><img src="!--swig￼12--&gt;/images/MALscrape/static.png" alt=""></p>
+<p>Looking at the html of <a target="_blank" rel="noopener" href="https://myanimelist.net/topanime.php">https://myanimelist.net/topanime.php</a> (using chrome, right click and select inspect, navigate to the element section, and you will see the HTML), each anime is a tr (table row) of the table. Within each row, name of anime is wrapped in class anime_ranking_h3, related information in class information, and score in class score. These can be scraped with beautifulsoup rather simply using the select() function. Then the text can be cleaned.</p>
+<p>We can further get a show’s start year and end year from the related information section. Here I used regular expression to get 4 digits of year to match start and end years.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getOneRow</span>(<span class="params">targetrow</span>):</span><br><span class="line">    animeTitle=targetrow.select(<span class="string">&quot;h3.anime_ranking_h3&quot;</span>)[<span class="number">0</span>].text</span><br><span class="line">    animeInformation=targetrow.select(<span class="string">&quot;div.information&quot;</span>)[<span class="number">0</span>].text.replace(<span class="string">&quot;\n&quot;</span>,<span class="string">&quot;|&quot;</span>).replace(<span class="string">&quot;  &quot;</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line">    animeScore=targetrow.select(<span class="string">&quot;td.score&quot;</span>)[<span class="number">0</span>].text.replace(<span class="string">&quot;\n&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="comment"># split by |</span></span><br><span class="line">    year=animeInformation.split(<span class="string">&quot;|&quot;</span>) </span><br><span class="line">    <span class="comment"># get all years in the second section from above</span></span><br><span class="line">    years=re.findall(<span class="string">&#x27;[0-9]+&#x27;</span>, year[<span class="number">2</span>])</span><br><span class="line">    start=<span class="string">&quot;NA&quot;</span></span><br><span class="line">    end=<span class="string">&quot;NA&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(year)&gt;<span class="number">0</span>:</span><br><span class="line">        start=years[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(years)&gt;<span class="number">1</span>:</span><br><span class="line">            end=years[<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> animeTitle, animeInformation,animeScore, start, end</span><br><span class="line"></span><br><span class="line"><span class="comment"># tablerow[0]</span></span><br></pre></td></tr></table></figure>
+<h4 id="Function-to-Get-a-Specified-Number-of-Anime-on-The-Top-Anime-List"><a href="#Function-to-Get-a-Specified-Number-of-Anime-on-The-Top-Anime-List" class="headerlink" title="Function to Get a Specified Number of Anime on The Top Anime List"></a>Function to Get a Specified Number of Anime on The Top Anime List</h4><p>Pass in the url into requests.get() function to get the entire page, then make a soup out of it with BeautifulSoup. With the soup ready, we could find the table corresponding to the top anime list and find all its rows. For each row, get desired data with the getOneRow() helper function. Because each page of the top anime list only has 50 animes, if requesting more than 50 anime, make sure to get a loop to scrape pages after the first one.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getTopAnime</span>(<span class="params">limit</span>):</span><br><span class="line">    <span class="comment"># I find using a dict to store data is the easiest, and it&#x27;s easy to convert to JSON or csv</span></span><br><span class="line">    topanimedict=[] </span><br><span class="line"></span><br><span class="line">    <span class="comment">#url</span></span><br><span class="line">    url = <span class="string">&quot;https://myanimelist.net/topanime.php&quot;</span> </span><br><span class="line">    <span class="comment">#make soup of html</span></span><br><span class="line">    soup = BeautifulSoup(requests.get(url).text, <span class="string">&#x27;lxml&#x27;</span>) </span><br><span class="line">    <span class="comment">#get table corresponding to the top anime table.</span></span><br><span class="line">    toptable = soup.select(<span class="string">&quot;table&quot;</span>)[<span class="number">0</span>] </span><br><span class="line">    <span class="comment">#get all rows in the table</span></span><br><span class="line">    tablerow=toptable.select(<span class="string">&quot;tr.ranking-list&quot;</span>) </span><br><span class="line">     <span class="comment">#get data for each row</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> tablerow:</span><br><span class="line">        anime, info, score, st, ed=getOneRow(row)</span><br><span class="line">        tempdict=&#123;<span class="string">&quot;anime&quot;</span>: anime,<span class="string">&quot;start&quot;</span>: st, <span class="string">&quot;end&quot;</span>:ed,  <span class="string">&quot;score&quot;</span>: score, <span class="string">&quot;information&quot;</span>: info&#125;</span><br><span class="line">        topanimedict.append(tempdict)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># get page 2, 3, 4 etc after the first one</span></span><br><span class="line">    <span class="keyword">if</span> limit&gt;<span class="number">50</span>: </span><br><span class="line">        ind=limit//<span class="number">50</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">1</span>,ind):</span><br><span class="line">            url = <span class="string">&quot;https://myanimelist.net/topanime.php?limit=&quot;</span>+<span class="built_in">str</span>(<span class="number">50</span>*i)</span><br><span class="line">            <span class="built_in">print</span>(url)</span><br><span class="line">            soup = BeautifulSoup(requests.get(url).text, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">            toptable = soup.select(<span class="string">&quot;table&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">            tablerow=toptable.select(<span class="string">&quot;tr.ranking-list&quot;</span>)</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> tablerow:</span><br><span class="line">                anime, info, score, st, ed=getOneRow(row)</span><br><span class="line">                tempdict=&#123;<span class="string">&quot;anime&quot;</span>: anime,<span class="string">&quot;start&quot;</span>: st, <span class="string">&quot;end&quot;</span>:ed,  <span class="string">&quot;score&quot;</span>: score, <span class="string">&quot;information&quot;</span>: info&#125;</span><br><span class="line">                topanimedict.append(tempdict)</span><br><span class="line">    </span><br><span class="line">    topanimedf=pd.DataFrame.from_dict(topanimedict)</span><br><span class="line">    <span class="keyword">return</span> topanimedf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="Convert-Data"><a href="#Convert-Data" class="headerlink" title="Convert Data"></a>Convert Data</h4><p>With the help of a dictionary and the pandas library, it is really easy to convert what we scraped into a csv. This script will save the data to the same directory where the script is stored.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df=getTopAnime(<span class="number">3000</span>)</span><br><span class="line">df.to_csv(<span class="string">&#x27;MALtop3000.csv&#x27;</span>, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>https://myanimelist.net/topanime.php?limit=50
+https://myanimelist.net/topanime.php?limit=100
+https://myanimelist.net/topanime.php?limit=150
+https://myanimelist.net/topanime.php?limit=200
+https://myanimelist.net/topanime.php?limit=250
+https://myanimelist.net/topanime.php?limit=300
+https://myanimelist.net/topanime.php?limit=350
+https://myanimelist.net/topanime.php?limit=400
+https://myanimelist.net/topanime.php?limit=450
+https://myanimelist.net/topanime.php?limit=500
+https://myanimelist.net/topanime.php?limit=550
+https://myanimelist.net/topanime.php?limit=600
+https://myanimelist.net/topanime.php?limit=650
+https://myanimelist.net/topanime.php?limit=700
+https://myanimelist.net/topanime.php?limit=750
+https://myanimelist.net/topanime.php?limit=800
+https://myanimelist.net/topanime.php?limit=850
+https://myanimelist.net/topanime.php?limit=900
+https://myanimelist.net/topanime.php?limit=950
+https://myanimelist.net/topanime.php?limit=1000
+https://myanimelist.net/topanime.php?limit=1050
+https://myanimelist.net/topanime.php?limit=1100
+https://myanimelist.net/topanime.php?limit=1150
+https://myanimelist.net/topanime.php?limit=1200
+https://myanimelist.net/topanime.php?limit=1250
+https://myanimelist.net/topanime.php?limit=1300
+https://myanimelist.net/topanime.php?limit=1350
+https://myanimelist.net/topanime.php?limit=1400
+https://myanimelist.net/topanime.php?limit=1450
+https://myanimelist.net/topanime.php?limit=1500
+https://myanimelist.net/topanime.php?limit=1550
+https://myanimelist.net/topanime.php?limit=1600
+https://myanimelist.net/topanime.php?limit=1650
+https://myanimelist.net/topanime.php?limit=1700
+https://myanimelist.net/topanime.php?limit=1750
+https://myanimelist.net/topanime.php?limit=1800
+https://myanimelist.net/topanime.php?limit=1850
+https://myanimelist.net/topanime.php?limit=1900
+https://myanimelist.net/topanime.php?limit=1950
+https://myanimelist.net/topanime.php?limit=2000
+https://myanimelist.net/topanime.php?limit=2050
+https://myanimelist.net/topanime.php?limit=2100
+https://myanimelist.net/topanime.php?limit=2150
+https://myanimelist.net/topanime.php?limit=2200
+https://myanimelist.net/topanime.php?limit=2250
+https://myanimelist.net/topanime.php?limit=2300
+https://myanimelist.net/topanime.php?limit=2350
+https://myanimelist.net/topanime.php?limit=2400
+https://myanimelist.net/topanime.php?limit=2450
+https://myanimelist.net/topanime.php?limit=2500
+https://myanimelist.net/topanime.php?limit=2550
+https://myanimelist.net/topanime.php?limit=2600
+https://myanimelist.net/topanime.php?limit=2650
+https://myanimelist.net/topanime.php?limit=2700
+https://myanimelist.net/topanime.php?limit=2750
+https://myanimelist.net/topanime.php?limit=2800
+https://myanimelist.net/topanime.php?limit=2850
+https://myanimelist.net/topanime.php?limit=2900
+https://myanimelist.net/topanime.php?limit=2950
+</code></pre><p>Take a look at the scrape data file. Looked pretty neat to me. Index is the ranking-1.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.tail()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>anime</th>
+      <th>end</th>
+      <th>information</th>
+      <th>score</th>
+      <th>start</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2995</th>
+      <td>Sekirei</td>
+      <td>2008</td>
+      <td>|TV (12 eps)|Jul 2008 - Sep 2008|320,922 members|</td>
+      <td>7.14</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>2996</th>
+      <td>Shin Atashin'chi</td>
+      <td>2016</td>
+      <td>|TV (26 eps)|Oct 2015 - Apr 2016|2,427 members|</td>
+      <td>7.14</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>2997</th>
+      <td>Tantei Opera Milky Holmes Movie: Gyakushuu no ...</td>
+      <td>2016</td>
+      <td>|Movie (1 eps)|Feb 2016 - Feb 2016|3,417 members|</td>
+      <td>7.14</td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <th>2998</th>
+      <td>Tenchi Muyou! Manatsu no Eve</td>
+      <td>1997</td>
+      <td>|Movie (1 eps)|Aug 1997 - Aug 1997|13,514 memb...</td>
+      <td>7.14</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <th>2999</th>
+      <td>Tengen Toppa Gurren Lagann: Parallel Works</td>
+      <td>2008</td>
+      <td>|Music (8 eps)|Jun 2008 - Sep 2008|29,743 memb...</td>
+      <td>7.14</td>
+      <td>2008</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="Scraping-Dynamic-HTML-Using-MAL-user-list-as-An-Example"><a href="#Scraping-Dynamic-HTML-Using-MAL-user-list-as-An-Example" class="headerlink" title="Scraping Dynamic HTML: Using MAL user list as An Example"></a>Scraping Dynamic HTML: Using MAL user list as An Example</h3><p>with the code here, you will be able to scrape any user’s MAL. Here I used my own anime list as an example (<a target="_blank" rel="noopener" href="https://myanimelist.net/animelist/iasnobmatsu">https://myanimelist.net/animelist/iasnobmatsu</a>, FYI I highly highly recommend Attack on Titan, Haikyu, and Hoseki no Kuni).</p>
+<p>Dynamic HTML is different from static HTML as the static HTML is rendered from HTML source file (imaging writing an html file and that is what we scrape). Dynamic HTML, on the other side, is not rendered from HTML source files but from JavaScript (Or JQuery or React, whatever framework). Dynamic HTML, unlike static, is not generate the moment a url is opened, but will need some time to render after the document is ready.</p>
+<h4 id="Helper-Function-to-Get-One-Row-of-MAL-User-List"><a href="#Helper-Function-to-Get-One-Row-of-MAL-User-List" class="headerlink" title="Helper Function to Get One Row of MAL User List"></a>Helper Function to Get One Row of MAL User List</h4><p><img src="!--swig￼13--&gt;/images/MALscrape/dynamic.png" alt=""></p>
+<p>Similar to the getOneRow function(), this function parses specific data for one anime. This step is the same regardless of static or dynamic HTML.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getOneRowMAL</span>(<span class="params">targetrow</span>):</span><br><span class="line">    animeTitle=targetrow.select(<span class="string">&quot;td.title&quot;</span>)[<span class="number">0</span>].select(<span class="string">&quot;a.link.sort&quot;</span>)[<span class="number">0</span>].text</span><br><span class="line">    animeType=targetrow.select(<span class="string">&quot;td.type&quot;</span>)[<span class="number">0</span>].text.strip()</span><br><span class="line">    animeScore=targetrow.select(<span class="string">&quot;td.score&quot;</span>)[<span class="number">0</span>].text.strip()</span><br><span class="line">    animeProgress=targetrow.select(<span class="string">&quot;td.progress&quot;</span>)[<span class="number">0</span>].text.replace(<span class="string">&quot;\n&quot;</span>, <span class="string">&quot;&quot;</span>).replace(<span class="string">&quot;  &quot;</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> animeTitle, animeType,animeScore, animeProgress</span><br><span class="line"></span><br><span class="line">getOneRowMAL(rows[<span class="number">27</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>(&#39;Haikyuu!!&#39;, &#39;TV&#39;, &#39;7&#39;, &#39; 25 &#39;)
+</code></pre><h4 id="Additional-Libraries-for-Dynamic-HTML"><a href="#Additional-Libraries-for-Dynamic-HTML" class="headerlink" title="Additional Libraries for Dynamic HTML"></a>Additional Libraries for Dynamic HTML</h4><p>For scraping dynamic HTML, we need selenium and time. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure>
+<h4 id="Get-Dynamic-MAL-User-List-Data"><a href="#Get-Dynamic-MAL-User-List-Data" class="headerlink" title="Get Dynamic MAL User List Data"></a>Get Dynamic MAL User List Data</h4><p>to scrape dynamic data, we need the url of the webpage. We also need to have a web browser driver. Here I use the Chrome driver (download here <a target="_blank" rel="noopener" href="https://chromedriver.chromium.org/">https://chromedriver.chromium.org/</a> or through homebrew etc). I stored it in my download folder, and I will need the path to the driver. I used Mac and Chrome driver in this case. </p>
+<p>With the url of webpage and path to browser driver ready, we will use selenium to declare a driver variable, and use it instead of requests to get the url.</p>
+<p>Then it is important to delay the rest of the function by some time, here I used .2 but it may differ depend on how fast a page loads on a specific device under specific internet conditions. This time allows dynamic HTML to render so we scrape the desired content instead of the intial script used to generate the HTML (which we cannot parse).<br>Then similar steps to scrape each row of data from the user anime list using BeautifulSoup.</p>
+<p>When using selenium with webdriver to scrap data, the browser may pop open with the url. You should not close the window until the data is scraped. If the window is closedbefore beautifulsoup get the change to read code on the driver, it will not work.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getMAL</span>(<span class="params">url, driverPath</span>):</span><br><span class="line">    MALdict=[]</span><br><span class="line">    <span class="comment"># use selenium to simulate driver</span></span><br><span class="line">    driver = webdriver.Chrome(driverPath)</span><br><span class="line">    driver.get(url) <span class="comment"># get page</span></span><br><span class="line"></span><br><span class="line">    time.sleep(<span class="number">0.2</span>) <span class="comment"># may need to change</span></span><br><span class="line">    <span class="comment"># similar to static, get soup and parse</span></span><br><span class="line">    soup=BeautifulSoup(driver.page_source, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    toptable = soup.select(<span class="string">&quot;table&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">    rows=toptable.select(<span class="string">&quot;tbody.list-item&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> rows:</span><br><span class="line">        ti,ty,sc,pr=getOneRowMAL(row)</span><br><span class="line">        MALdict.append(&#123;<span class="string">&quot;anime&quot;</span>:ti,<span class="string">&quot;type&quot;</span>:ty, <span class="string">&quot;score&quot;</span>:sc,<span class="string">&quot;progress&quot;</span>:pr&#125;)</span><br><span class="line">    <span class="keyword">return</span> pd.DataFrame.from_dict(MALdict)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="Convert-Data-1"><a href="#Convert-Data-1" class="headerlink" title="Convert Data"></a>Convert Data</h4><p>Here we use the function above to get dynamic HTML data from my MAL list (you can replace with any user’s MAL list. The data is saved again to a CSV file.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url=<span class="string">&#x27;https://myanimelist.net/animelist/iasnobmatsu&#x27;</span></span><br><span class="line">driverp=<span class="string">&quot;/Users/ziqianxu/Downloads/chromedriver&quot;</span></span><br><span class="line">df2=getMAL(url,driverp)</span><br><span class="line">df2.to_csv(<span class="string">&#x27;iasnobmatsuMAL.csv&#x27;</span>, index=<span class="literal">False</span>)</span><br><span class="line">df2.head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>anime</th>
+      <th>progress</th>
+      <th>score</th>
+      <th>type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>JoJo no Kimyou na Bouken Part 3: Stardust Crus...</td>
+      <td>- / 24</td>
+      <td>8</td>
+      <td>TV</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>One Piece</td>
+      <td>- / -</td>
+      <td>8</td>
+      <td>TV</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Shingeki no Kyojin: The Final Season</td>
+      <td>- / 16</td>
+      <td>10</td>
+      <td>TV</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Akagami no Shirayuki-hime</td>
+      <td>12</td>
+      <td>5</td>
+      <td>TV</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bleach</td>
+      <td>366</td>
+      <td>7</td>
+      <td>TV</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/web-scraping/" rel="tag"># web scraping</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/04/002-seam/" rel="prev" title="Content-Aware Image Resizing">
+                  <i class="fa fa-chevron-left"></i> Content-Aware Image Resizing
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iasnobmatsu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
