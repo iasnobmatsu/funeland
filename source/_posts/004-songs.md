@@ -4,6 +4,7 @@ date: 2022-11-05 12:36:13
 tags: [摇滚乐, 歌单, rock, playlist, Chinese indie music]
 categories: 
     - [music]
+hidden: false
 ---
 
 ### 关于我听的歌
