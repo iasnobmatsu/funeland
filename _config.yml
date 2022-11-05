@@ -3,9 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 
-# footer ??
-footer:
-  since: 2020
+
 
 
 
@@ -132,12 +130,6 @@ tagcloud:
   amount: 200 # Total amount of tags
   orderby: name # Order of tags
   order: 1 # Sort order
-
-menu:
-  home: / || fa fa-home
-  archives: /archives/ || fa fa-archive
-  tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-tag
 
 nav:
   home: /
