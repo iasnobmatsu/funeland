@@ -25,12 +25,10 @@
     margin-right: 20px
     width: $logo-width
     height: $logo-height
-    border-radius: 5px
+    border-radius: 50px
     background-size: $logo-width $logo-height
     background-repeat: no-repeat
-    if $logo-grayout
-      filter: grayscale(100%)
-      -webkit-filter: grayscale(100%)
+ 
 
   #nav
     color: $color-accent-1
@@ -69,11 +67,6 @@
         a
           margin-right: 0
 
-if $logo-grayout
-  #header:hover
-    #logo
-      filter: none
-      -webkit-filter: none
 
 @media screen and (max-width: 480px)
   #header #title
