@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://iasnobmatsu.github.io/2021/05/08/002-seam/set1_carved6.jpg">
 <meta property="og:image" content="http://iasnobmatsu.github.io/2021/05/08/002-seam/set1_carved8.jpg">
 <meta property="article:published_time" content="2021-05-08T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-05T16:35:37.854Z">
+<meta property="article:modified_time" content="2022-11-08T02:39:29.171Z">
 <meta property="article:author" content="iasnobmatsu">
 <meta property="article:tag" content="computational photography">
 <meta property="article:tag" content="matlab">
@@ -30,17 +30,17 @@
     
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+          <link rel="shortcut icon" href="/images/logo-transp.png">
         
       
       
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          <link rel="icon" type="image/png" href="/images/logo-transp.png" sizes="192x192">
         
       
       
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo-transppng">
         
       
     
@@ -290,8 +290,7 @@ mjx-container[display="true"] + br {
 <h4 id="Some-Challenges"><a href="#Some-Challenges" class="headerlink" title="Some Challenges"></a>Some Challenges</h4><p>While implementing seam deletions, the most challenging aspect is to correctly set up dynamic program to find the seam. Because seam pixels need to be connected to previous pixels (can only be off by 1 pixel), when dynamically going through all pixels in an image, the range that the next step pixel can take is restricted to between +1 and -1 of the current pixel position. It also took some tries to figure out that using entropy as the energy function is relatively stable and easy to implement. Other functions that detect edges that I tried did not work as well in seam carving.<br>In my opinion, seam insertion is more challenging than seam carving. The intuitive solution is to find a seam, duplicate it, then find a new seam in the stretched image, and again duplicated it. This repeated seam insertion process, however, would not work because it would just be the same seam being duplicated again and again. Therefore, there is the need find at once set of all seams that would be removed if performing a seam deletion, then reverse-engineering these seams and duplicate each of them. It is also challenging to figure out how to correctly duplicate seams at correct pixels. The seams, if finding them the seam way as in seam deletion, would not work, because the image sizes have changed. Therefore, it is necessary to keep track of seams in the pixel index or positions in the original image’s perspective. And when inserting the duplicated seams, it is necessary again to use the original image’s indexes. </p>
 <p>The other challenging part of the project is to find out a way to minimize artifacts, especially on images where there is a specific object to keep intact. The solution I came up with is to use the getMask function that we have used in multiple other assignments. Using a user-specified black and white mask of the image, it is possible to increase energy on the masked regions when finding seams. Thus, the seam-finding algorithm will seek to avoid these regions.</p>
 <h4 id="Seam-Carving-and-Insertion-Processes"><a href="#Seam-Carving-and-Insertion-Processes" class="headerlink" title="Seam Carving and Insertion Processes"></a>Seam Carving and Insertion Processes</h4><p><a target="_blank" rel="noopener" href="https://github.com/iasnobmatsu/SeamCarvingAndInsertion">Code and more</a></p>
-<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p>original image</p>
-<img src="/2021/05/08/002-seam/set4_original.jpg" class="">
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p>original image<br><img src="set4_original.jpg" alt="set4"></p>
 <p>removing 90 pixels horizontally</p>
 <img src="/2021/05/08/002-seam/set4_carved3.jpg" class="">
 <p>inseting 30 pixels horizontally</p>

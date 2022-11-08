@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Before We BeginRequired tools: Git and node.js. These should be downloaded first. You can use node -v and git --version to check if you have these installed.  Install HexoHexo can be installed using n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)">
+<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/07/007-blog/index.html">
+<meta property="og:site_name" content="A Blog From Nowhere">
+<meta property="og:description" content="Before We BeginRequired tools: Git and node.js. These should be downloaded first. You can use node -v and git --version to check if you have these installed.  Install HexoHexo can be installed using n">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://iasnobmatsu.github.io/2022/11/07/007-blog/tags.png">
+<meta property="article:published_time" content="2022-11-07T19:51:09.000Z">
+<meta property="article:modified_time" content="2022-11-08T03:14:51.489Z">
+<meta property="article:author" content="iasnobmatsu">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://iasnobmatsu.github.io/2022/11/07/007-blog/tags.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo-transp.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo-transp.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo-transppng">
+        
+      
+    
+    <!-- title -->
+    <title>How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Posts</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/11/05/004-songs/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/07/007-blog/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&text=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&is_video=false&description=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)&body=Check out this article: http://iasnobmatsu.github.io/2022/11/07/007-blog/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&name=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/07/007-blog/&t=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Before-We-Begin"><span class="toc-number">1.</span> <span class="toc-text">Before We Begin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Hexo"><span class="toc-number">2.</span> <span class="toc-text">Install Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start-A-Blog"><span class="toc-number">3.</span> <span class="toc-text">Start A Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-Hexo-Themes"><span class="toc-number">4.</span> <span class="toc-text">Using Hexo Themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Write-Blog-Posts"><span class="toc-number">5.</span> <span class="toc-text">Write Blog Posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Images-in-Blog"><span class="toc-number">6.</span> <span class="toc-text">Add Images in Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adding-Latex-Compatibility"><span class="toc-number">7.</span> <span class="toc-text">Adding Latex Compatibility</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adding-Categories-and-Tags"><span class="toc-number">8.</span> <span class="toc-text">Adding Categories and Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-Your-Blog"><span class="toc-number">9.</span> <span class="toc-text">Customizing Your Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-Github"><span class="toc-number">10.</span> <span class="toc-text">Deploy to Github</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">iasnobmatsu</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-11-07T19:51:09.000Z" itemprop="datePublished">2022-11-07</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/miscellaneous/">miscellaneous</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/blog/" rel="tag">blog</a>, <a class="tag-link-link" href="/tags/github/" rel="tag">github</a>, <a class="tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Before-We-Begin"><a href="#Before-We-Begin" class="headerlink" title="Before We Begin"></a>Before We Begin</h3><p>Required tools: <a target="_blank" rel="noopener" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a> and <a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>. These should be downloaded first. You can use <code>node -v</code> and <code>git --version</code> to check if you have these installed. </p>
+<h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p>Hexo can be installed using node.js. After opening the command line tool, run <code>npm install -g hexo-cli</code>.<br>See the official documentation on how to install hexo <a target="_blank" rel="noopener" href="https://hexo.io/docs/">here</a>.</p>
+<h3 id="Start-A-Blog"><a href="#Start-A-Blog" class="headerlink" title="Start A Blog"></a>Start A Blog</h3><p>To start a new blog with hexo is simple. After going to the path you want to place your blog folder, run <code>hexo init [blog]</code> with <code>[blog]</code> being the name for your folder. Then, <code>cd [blog]</code> to enter the folder and run <code>npm install</code> to install all dependencies.</p>
+<p>Congratulations, you now have initialized your blog! To take a look at your own blog, type <code>hexo s</code> or <code>hexo server</code> in the blog directory, and then go to the corresponding localhost:xxx site to view your blog.</p>
+<h3 id="Using-Hexo-Themes"><a href="#Using-Hexo-Themes" class="headerlink" title="Using Hexo Themes"></a>Using Hexo Themes</h3><p>We all know that looks matter for a blog. Luckily, with hexo, there is an abundance of <a target="_blank" rel="noopener" href="https://hexo.io/themes/">themes</a> you can choose from. I used the <a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus">cactus theme</a>. Below, I will show you how to use the theme you like. </p>
+<p>After figuring out which theme I want to use (cactus in this case), I downloaded the theme files using <code>git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus</code> on the command line. This should be done within your blog directory. If successful, you will see that within the <code>themes/</code> folder there is a <code>cactus</code> folder containing all theme files. </p>
+<p>Then, within the <code>_config.yml</code> file in the blog root directory, you can change <code>theme: landscape</code> (the default) to <code>theme: cactus</code>. Now, if you refresh the server, you shall see that your blog is using the brand new theme we just installed!</p>
+<h3 id="Write-Blog-Posts"><a href="#Write-Blog-Posts" class="headerlink" title="Write Blog Posts"></a>Write Blog Posts</h3><p>To add a new post, you can type <code>hexo new post [post name]</code> on the command line, which will automatically add a <code>[postname.md]</code> file under the <code>/source/_posts/</code> directory. You can edit the markdown file to write your blog post. </p>
+<h3 id="Add-Images-in-Blog"><a href="#Add-Images-in-Blog" class="headerlink" title="Add Images in Blog"></a>Add Images in Blog</h3><p>First, a plugin is needed. Run <code>npm install hexo-image-link --save</code> on command line to install the image link plugin. To include images in your writing, you can add a folder with the same name as your blog in the <code>/source/_posts</code> directory. For example, if I’m writing a post called <code>test.md</code> then I would need a <code>test</code> asset folder for the images. After putting images in the corresponding asset folder, for example, <code>test_img.png</code>, simply use the markdown syntax to include the image like <code>[image title](test_img.png)</code>. Note that if you want the asset folder to be automatically generated every time you add a new blog post, simply change <code>post_asset_folder: false</code> to <code>post_asset_folder: true</code> in the <code>_config.yml</code> file. </p>
+<h3 id="Adding-Latex-Compatibility"><a href="#Adding-Latex-Compatibility" class="headerlink" title="Adding Latex Compatibility"></a>Adding Latex Compatibility</h3><p>For Latex to work properly, I tried several tutorials online and neither of them have worked to perfection. The method below worked okay for me:</p>
+<ol>
+<li><code>npm install hexo-math --save</code></li>
+<li><code>npm install hexo-renderer-kra --save</code></li>
+<li><code>npm install hexo-renderer-kramed --save</code></li>
+<li><code>npm install hexo-filter-mathjax --save</code></li>
+<li>add <code>plugins: hexo-math</code> in <code>_config.yml</code></li>
+<li>add this to  <code>_config.yml</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br></pre></td></tr></table></figure></li>
+<li>in the header of your markdown file, add <code>mathjax: true</code></li>
+</ol>
+<p>Now latex should work! so I can type something like <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -1.091ex;" xmlns="http://www.w3.org/2000/svg" width="6.115ex" height="3.048ex" role="img" focusable="false" viewBox="0 -864.9 2702.7 1347.1"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g><g data-mml-node="mo" transform="translate(862.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mfrac" transform="translate(1862.4,0)"><g data-mml-node="mn" transform="translate(243.3,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mi" transform="translate(220,-345) scale(0.707)"><path data-c="1D6FD" d="M29 -194Q23 -188 23 -186Q23 -183 102 134T186 465Q208 533 243 584T309 658Q365 705 429 705H431Q493 705 533 667T573 570Q573 465 469 396L482 383Q533 332 533 252Q533 139 448 65T257 -10Q227 -10 203 -2T165 17T143 40T131 59T126 65L62 -188Q60 -194 42 -194H29ZM353 431Q392 431 427 419L432 422Q436 426 439 429T449 439T461 453T472 471T484 495T493 524T501 560Q503 569 503 593Q503 611 502 616Q487 667 426 667Q384 667 347 643T286 582T247 514T224 455Q219 439 186 308T152 168Q151 163 151 147Q151 99 173 68Q204 26 260 26Q302 26 349 51T425 137Q441 171 449 214T457 279Q457 337 422 372Q380 358 347 358H337Q258 358 258 389Q258 396 261 403Q275 431 353 431Z"></path></g><rect width="600.2" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container>.</p>
+<p>I could not figure out how to make latex blocks render though (those with two <code>$</code>). Need some help with this. </p>
+<h3 id="Adding-Categories-and-Tags"><a href="#Adding-Categories-and-Tags" class="headerlink" title="Adding Categories and Tags"></a>Adding Categories and Tags</h3><p>Tags and categories are my favorite hexo features. In your blog post header, things like </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tags: [blog, hexo, github]</span><br><span class="line">categories: [miscellaneous]</span><br></pre></td></tr></table></figure>
+<p>could be added, and this will automatically generate three tags (blog, hexo, github) and one category (miscellaneous) as shown below. You can click on the tag/category to see posts corresponding to them.</p>
+<p><img src="tags.png" alt="tags"></p>
+<p>However, this poses an incovenience. That is, we cannot see all available tags or categories. To make a webpage containing all tags, run <code>hexo new page tags</code> which will generate a <code>tags</code> folder under <code>source</code>. Within this folder, there is a <code>index.md</code> file which controls the tags page. Change <code>type:</code> to <code>type: tags</code> so that this page will show all available tags. To view this page, re-route to the <code>/tags</code> path. So if I’m testing my blog on <code>http://localhost:4000/</code>, this path would be <code>http://localhost:4000/tags/</code>. </p>
+<p>The categories page can be made similarly.</p>
+<h3 id="Customizing-Your-Blog"><a href="#Customizing-Your-Blog" class="headerlink" title="Customizing Your Blog"></a>Customizing Your Blog</h3><p>Many themes such as <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="6.328ex" height="1.441ex" role="img" focusable="false" viewBox="0 -626 2797 637"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(433,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(962,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(1395,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(1756,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(2328,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></svg></mjx-container> and <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="4.523ex" height="1.441ex" role="img" focusable="false" viewBox="0 -626 1999 637"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(600,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(1066,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(1638,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g></g></g></svg></mjx-container> provide options for you to customize how your website looks. This can typically be done in the <code>_config.yml</code> file. However, if you need to further fine tune how your blog looks, then this might involve some changes to files under the <code>\themes</code> folder. For example, I changed font color, logo, and some text displays for my blog from the cactus theme. </p>
+<h3 id="Deploy-to-Github"><a href="#Deploy-to-Github" class="headerlink" title="Deploy to Github"></a>Deploy to Github</h3><ol>
+<li>In github, create a new repository named [your username].github.io</li>
+<li>In the blog root directory, run <code>npm install hexo-deployer-git --save</code></li>
+<li>Add the following to <code>_config.yml</code> (learnt from <a target="_blank" rel="noopener" href="https://medium.com/techtofreedom/3-steps-to-build-your-static-website-with-hexo-and-github-pages-9bc9b26a24c2">here</a>)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: [your repository]</span><br><span class="line">  branch: main</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure></li>
+<li>Push your files to the repository </li>
+<li>In your repository, find settings -&gt; Pages -&gt; Your GitHub Pages site is currently being built from the XXX branch, choose the <code>gh-pages</code> branch.</li>
+</ol>
+<p>Done!</p>
+<p>Now you can access your blog via <a href="https://[your">https://[your</a> username].github.io. </p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Posts</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Before-We-Begin"><span class="toc-number">1.</span> <span class="toc-text">Before We Begin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Hexo"><span class="toc-number">2.</span> <span class="toc-text">Install Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Start-A-Blog"><span class="toc-number">3.</span> <span class="toc-text">Start A Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-Hexo-Themes"><span class="toc-number">4.</span> <span class="toc-text">Using Hexo Themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Write-Blog-Posts"><span class="toc-number">5.</span> <span class="toc-text">Write Blog Posts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-Images-in-Blog"><span class="toc-number">6.</span> <span class="toc-text">Add Images in Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adding-Latex-Compatibility"><span class="toc-number">7.</span> <span class="toc-text">Adding Latex Compatibility</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adding-Categories-and-Tags"><span class="toc-number">8.</span> <span class="toc-text">Adding Categories and Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-Your-Blog"><span class="toc-number">9.</span> <span class="toc-text">Customizing Your Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-Github"><span class="toc-number">10.</span> <span class="toc-text">Deploy to Github</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/07/007-blog/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&text=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&is_video=false&description=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)&body=Check out this article: http://iasnobmatsu.github.io/2022/11/07/007-blog/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&title=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/07/007-blog/&name=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/07/007-blog/&t=How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2022
+    iasnobmatsu
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Posts</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
