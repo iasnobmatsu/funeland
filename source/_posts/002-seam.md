@@ -34,9 +34,7 @@ The other challenging part of the project is to find out a way to minimize artif
 #### Examples
 
 original image
-
-{% asset_img set4_original.jpg %}
-
+![set4](set4_original.jpg)
 
 removing 90 pixels horizontally
 
