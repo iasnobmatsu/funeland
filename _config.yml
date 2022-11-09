@@ -3,10 +3,6 @@
 ## Source: https://github.com/hexojs/hexo/
 
 
-
-
-
-
 # Site
 title: A Blog From Nowhere
 subtitle: ''
@@ -139,9 +135,12 @@ nav:
   Tag: /tags/
   Category: /categories/
 
-social_links:
-  github: https://github.com/iasnobmatsu
+social_links: false
 
 copyright:
   start_year: 2022
   end_year: 2022
+
+search: true
+page.search: true
+

@@ -97,7 +97,7 @@ deploy:
 
 Done!
 
-Now you can access your blog via https://[your username].github.io. 
+Now you can access your blog via `https://[your username].github.io`. 
 
 
 
