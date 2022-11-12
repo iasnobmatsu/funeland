@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta property="og:type" content="article">
-<meta property="og:title" content="Missing Data Imputation Under the Bayesian Framework Using JAGS">
-<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/index.html">
+    <meta name="description" content="朋友Stan7s美丽的hexo博客. 喜欢白天&#x2F;夜晚的模式切换。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stan7s&#39;s Blog">
+<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/12/013-stan7s/index.html">
 <meta property="og:site_name" content="A Blog From Nowhere">
+<meta property="og:description" content="朋友Stan7s美丽的hexo博客. 喜欢白天&#x2F;夜晚的模式切换。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-11-05T15:35:41.000Z">
-<meta property="article:modified_time" content="2022-11-12T03:10:48.203Z">
+<meta property="article:published_time" content="2022-11-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-12T03:10:48.275Z">
 <meta property="article:author" content="iasnobmatsu">
-<meta property="article:tag" content="statistics">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
     
     
@@ -35,7 +37,7 @@
       
     
     <!-- title -->
-    <title>Missing Data Imputation Under the Bayesian Framework Using JAGS</title><meta name="robots" content="noindex">
+    <title>Stan7s&#39;s Blog</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -81,6 +83,10 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" aria-label="Previous post" href="/2022/11/12/012-anime2022/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/11/08/011-art/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -93,17 +99,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&text=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&is_video=false&description=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Missing Data Imputation Under the Bayesian Framework Using JAGS&body=Check out this article: http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&name=Missing Data Imputation Under the Bayesian Framework Using JAGS&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&t=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&text=Stan7s&#39;s Blog"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&is_video=false&description=Stan7s&#39;s Blog"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stan7s&#39;s Blog&body=Check out this article: http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&name=Stan7s&#39;s Blog&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&t=Stan7s&#39;s Blog"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -120,7 +126,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Missing Data Imputation Under the Bayesian Framework Using JAGS
+        Stan7s&#39;s Blog
     </h1>
 
 
@@ -132,7 +138,7 @@
       
     <div class="postdate">
       
-        <time datetime="2022-11-05T15:35:41.000Z" itemprop="datePublished">2022-11-05</time>
+        <time datetime="2022-11-12T00:00:00.000Z" itemprop="datePublished">2022-11-12</time>
         
       
     </div>
@@ -141,14 +147,14 @@
       
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/project/">project</a>
+        <a class="category-link" href="/categories/miscellaneous/">miscellaneous</a>
     </div>
 
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        
+        <a class="tag-link-link" href="/tags/blog/" rel="tag">blog</a>
     </div>
 
 
@@ -157,7 +163,8 @@
   
 
   <div class="content" itemprop="articleBody">
-    <!-- flag of hidden posts -->
+    <p>朋友Stan7s美丽的hexo<a target="_blank" rel="noopener" href="https://stan7s.github.io/blog/">博客</a>. 喜欢白天/夜晚的模式切换。</p>
+
   </div>
 </article>
 
@@ -191,17 +198,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&text=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&is_video=false&description=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Missing Data Imputation Under the Bayesian Framework Using JAGS&body=Check out this article: http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&title=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&name=Missing Data Imputation Under the Bayesian Framework Using JAGS&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/05/006-missing-data-jags/&t=Missing Data Imputation Under the Bayesian Framework Using JAGS"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&text=Stan7s&#39;s Blog"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&is_video=false&description=Stan7s&#39;s Blog"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Stan7s&#39;s Blog&body=Check out this article: http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&name=Stan7s&#39;s Blog&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&t=Stan7s&#39;s Blog"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
