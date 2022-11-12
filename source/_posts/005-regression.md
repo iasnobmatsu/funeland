@@ -1,8 +1,8 @@
 ---
 title: Steps in Conducting a Regresssion Analysis
 date: 2022-11-05 15:16:20
-tags: [linear regression]
-categories: [data science]
+tags: [statistics]
+categories: [project]
 hidden: true
 ---
 

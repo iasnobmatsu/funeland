@@ -1,9 +1,9 @@
 ---
 title: Personal Favorites of Chinese Rock/Indie Music（一些我听的乐队）
 date: 2022-11-05 12:36:13
-tags: [音乐, 歌单, 摇滚乐]
+tags: [music]
 categories: 
-    - [music]
+    - [review]
 hidden: false
 ---
 

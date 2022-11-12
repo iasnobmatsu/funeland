@@ -1,8 +1,8 @@
 ---
 title: 吉他学习资料
 date: 2022-11-08 19:09:22
-tags: [摇滚乐, guitar]
-categories: [music]
+tags: [music, guitar]
+categories: [hobby]
 ---
 
 ## 教学及曲谱
