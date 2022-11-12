@@ -2,6 +2,13 @@
   <% if (config.description) { %>
     <%- markdown(config.description) %>
   <% } %>
+
+
+  <!-- https://css-tricks.com/snippets/css/typewriter-effect/ -->
+
+    <p class="typewriter">This is an unknown creature's blog. </p>
+
+
   <% if (theme.social_links) { %>
     <p>
       <%= __('index.find_me_on') %>
