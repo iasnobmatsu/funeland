@@ -1144,6 +1144,47 @@ body {
 .project-list .project-item p {
   display: inline;
 }
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+/* border-right: .1em solid black;*/
+/* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+/* margin: 0 auto;*/
+/* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.7s step-end infinite;
+}
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 article header .posttitle {
   margin-top: 0;
   margin-bottom: 0;
@@ -1172,7 +1213,7 @@ article .content h2:before {
   top: -4px;
   left: -1rem;
   color: #1c4d75;
-  content: "#";
+  content: "";
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -1582,57 +1623,57 @@ p.no-result {
   content: ")";
 }
 .highlight {
-  color: #585260;
-  background: #efecf4;
+  color: #657b83;
+  background: #fdf6e3;
 }
 .highlight .code .comment,
 .highlight .code .quote {
-  color: #655f6d;
-}
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .attribute,
-.highlight .code .tag,
-.highlight .code .name,
-.highlight .code .regexp,
-.highlight .code .link,
-.highlight .code .selector-id,
-.highlight .code .selector-class {
-  color: #be4678;
-}
-.highlight .code .number,
-.highlight .code .meta,
-.highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .literal,
-.highlight .code .type,
-.highlight .code .params {
-  color: #aa573c;
-}
-.highlight .code .string,
-.highlight .code .symbol,
-.highlight .code .bullet {
-  color: #2a9292;
-}
-.highlight .code .title,
-.highlight .code .section {
-  color: #576ddb;
+  color: #93a1a1;
 }
 .highlight .code .keyword,
-.highlight .code .selector-tag {
-  color: #955ae7;
-}
-.highlight .code .deletion,
+.highlight .code .selector-tag,
 .highlight .code .addition {
-  color: #19171c;
-  display: inline-block;
-  width: 100%;
+  color: #859900;
 }
+.highlight .code .number,
+.highlight .code .string,
+.highlight .code .meta .meta-string,
+.highlight .code .literal,
+.highlight .code .doctag,
+.highlight .code .regexp {
+  color: #2aa198;
+}
+.highlight .code .title,
+.highlight .code .section,
+.highlight .code .name,
+.highlight .code .selector-id,
+.highlight .code .selector-class {
+  color: #268bd2;
+}
+.highlight .code .attribute,
+.highlight .code .attr,
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .class .title,
+.highlight .code .type {
+  color: #b58900;
+}
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .subst,
+.highlight .code .meta,
+.highlight .code .meta .keyword,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .link {
+  color: #cb4b16;
+}
+.highlight .code .built_in,
 .highlight .code .deletion {
-  background-color: #be4678;
+  color: #dc322f;
 }
-.highlight .code .addition {
-  background-color: #2a9292;
+.highlight .code .formula {
+  background: #eee8d5;
 }
 .highlight .code .emphasis {
   font-style: italic;
