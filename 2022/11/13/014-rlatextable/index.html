@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="朋友Stan7s美丽的hexo博客. 喜欢白天&#x2F;夜晚的模式切换。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Stan7s&#39;s Blog">
-<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/12/013-stan7s/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Converting Dataframes into Various Formats (HTML, LATEX etc) in R">
+<meta property="og:url" content="http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/index.html">
 <meta property="og:site_name" content="A Blog From Nowhere">
-<meta property="og:description" content="朋友Stan7s美丽的hexo博客. 喜欢白天&#x2F;夜晚的模式切换。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-11-12T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-12T23:06:02.661Z">
+<meta property="article:published_time" content="2022-11-13T05:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-13T01:10:00.010Z">
 <meta property="article:author" content="iasnobmatsu">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="R">
+<meta property="article:tag" content="latex">
 <meta name="twitter:card" content="summary">
     
     
@@ -37,7 +36,7 @@
       
     
     <!-- title -->
-    <title>Stan7s&#39;s Blog</title>
+    <title>Converting Dataframes into Various Formats (HTML, LATEX etc) in R</title><meta name="robots" content="noindex">
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -84,8 +83,6 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2022/11/11/012-anime2022/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
@@ -97,17 +94,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&text=Stan7s&#39;s Blog"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&is_video=false&description=Stan7s&#39;s Blog"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Stan7s&#39;s Blog&body=Check out this article: http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&name=Stan7s&#39;s Blog&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&t=Stan7s&#39;s Blog"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&text=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&is_video=false&description=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Converting Dataframes into Various Formats (HTML, LATEX etc) in R&body=Check out this article: http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&name=Converting Dataframes into Various Formats (HTML, LATEX etc) in R&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&t=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -124,7 +121,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Stan7s&#39;s Blog
+        Converting Dataframes into Various Formats (HTML, LATEX etc) in R
     </h1>
 
 
@@ -136,7 +133,7 @@
       
     <div class="postdate">
       
-        <time datetime="2022-11-12T00:00:00.000Z" itemprop="datePublished">2022-11-12</time>
+        <time datetime="2022-11-13T05:00:00.000Z" itemprop="datePublished">2022-11-13</time>
         
       
     </div>
@@ -145,14 +142,14 @@
       
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/miscellaneous/">miscellaneous</a>
+        
     </div>
 
 
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/tags/blog/" rel="tag">blog</a>
+        
     </div>
 
 
@@ -161,8 +158,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>朋友Stan7s美丽的hexo<a target="_blank" rel="noopener" href="https://stan7s.github.io/blog/">博客</a>. 喜欢白天/夜晚的模式切换。</p>
-
+    <!-- flag of hidden posts -->
   </div>
 </article>
 
@@ -196,17 +192,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&text=Stan7s&#39;s Blog"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&is_video=false&description=Stan7s&#39;s Blog"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Stan7s&#39;s Blog&body=Check out this article: http://iasnobmatsu.github.io/2022/11/12/013-stan7s/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&title=Stan7s&#39;s Blog"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&name=Stan7s&#39;s Blog&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/12/013-stan7s/&t=Stan7s&#39;s Blog"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&text=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&is_video=false&description=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Converting Dataframes into Various Formats (HTML, LATEX etc) in R&body=Check out this article: http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&title=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&name=Converting Dataframes into Various Formats (HTML, LATEX etc) in R&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://iasnobmatsu.github.io/2022/11/13/014-rlatextable/&t=Converting Dataframes into Various Formats (HTML, LATEX etc) in R"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
