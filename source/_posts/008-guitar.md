@@ -2,7 +2,7 @@
 title: 吉他学习资料
 date: 2022-11-08 19:09:22
 tags: [music, guitar]
-categories: [hobby]
+categories: [hobbies]
 ---
 
 ## 教学及曲谱

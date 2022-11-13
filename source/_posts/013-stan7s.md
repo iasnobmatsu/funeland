@@ -1,8 +1,8 @@
 ---
 title:  Stan7s's Blog
-date: 2022-11-12
+date: 2022-11-11
 tags: [blog]
-categories:  [miscellaneous]
+categories:  [enjoy]
 ---
 
 

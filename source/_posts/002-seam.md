@@ -3,7 +3,7 @@ title: Content-Aware Image Resizing
 date: 2021-05-08
 mathjax: true
 categories: 
- - [project]
+ - [projects]
 tags: [computational photography, matlab]
 ---
 
