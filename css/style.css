@@ -735,7 +735,7 @@ body {
 #header #nav ul li:last-child a {
   margin-right: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 575px) {
   #header {
     min-height: 60px;
   }
@@ -762,11 +762,15 @@ body {
   #header #nav ul li {
     display: inline-block;
     padding: 0;
-    margin: 0;
+    margin-right: 0px;
     border: none;
   }
+  #header #nav ul li a {
+    padding: 0;
+    margin: 0.4rem;
+  }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 405px) {
   #header {
     min-height: 60px;
   }
@@ -925,8 +929,8 @@ body {
   clear: both;
   overflow: auto;
   margin-top: 1rem;
-  padding-right: 2rem;
-  max-width: 20em;
+  padding-right: 0rem;
+  max-width: 18em;
   max-height: calc(95vh - 7rem);
   text-align: right;
 }
@@ -942,7 +946,7 @@ body {
 }
 #header-post #toc .toc-level-2:before {
   color: #1c4d75;
-  content: "#";
+  content: "";
 }
 #header-post #toc .toc-level-3 {
   color: #276db0;
@@ -1194,7 +1198,7 @@ body {
   display: inline;
 }
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden; /*Ensures the content is not revealed until the animation */
 /* border-right: .1em solid black;*/
 /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -1232,6 +1236,38 @@ body {
   }
   to {
     width: 100%;
+  }
+}
+@-moz-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+@-o-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
   }
 }
 article header .posttitle {
@@ -1424,13 +1460,13 @@ article .content .caption {
 }
 #footer li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 10px;
   border-right: 1px solid;
   border-color: #276db0;
   vertical-align: middle;
 }
 #footer li a {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 #footer li:last-child {
   margin-right: 0;
@@ -1441,11 +1477,12 @@ article .content .caption {
 }
 #footer a {
   color: #276db0;
-  text-decoration: underline;
+  text-decoration: none;
   background-image: none;
 }
 #footer a:hover {
-  color: #3e8bd4;
+  color: #fff;
+  background-color: none;
 }
 #footer .footer-left {
   height: 20px;
@@ -1463,7 +1500,7 @@ article .content .caption {
   }
   #footer .footer-left {
     align-self: flex-start;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   #footer .footer-right {
     align-self: flex-end;
