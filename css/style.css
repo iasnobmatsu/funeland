@@ -587,6 +587,12 @@ body {
   background-color: #1c4d75;
   color: #fff;
 }
+.content a.category-list-link {
+  text-decoration: none;
+}
+.content .tag-cloud-tags a {
+  text-decoration: none;
+}
 .content a.icon {
   background: none;
 }
