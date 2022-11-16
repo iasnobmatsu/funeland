@@ -736,35 +736,65 @@ body {
   margin-right: 0;
 }
 @media screen and (max-width: 480px) {
-  #header #title {
-    display: table;
-    margin-right: 5rem;
+  #header {
     min-height: 60px;
   }
-  #header #title h1 {
+  #header a {
+    width: 100%;
+  }
+  #header a #logo {
     display: table-cell;
     vertical-align: middle;
   }
-  #header #nav ul a:hover {
-    background: none;
+  #header #title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #header #nav ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
   }
   #header #nav ul li {
-    display: none;
-    border-right: 0;
-  }
-  #header #nav ul li.icon {
-    position: absolute;
-    top: 77px;
-    right: 1rem;
     display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
-  #header #nav ul.responsive li {
+}
+@media screen and (max-width: 400px) {
+  #header {
+    min-height: 60px;
+  }
+  #header a {
+    width: 100%;
+  }
+  #header a #logo {
+    display: none;
+    vertical-align: middle;
+  }
+  #header #title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #header #nav ul {
     display: block;
+    list-style-type: disc;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
   }
-  #header #nav li:not(:first-child) {
-    padding-top: 1rem;
-    padding-left: 80px;
-    font-size: 1rem;
+  #header #nav ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 }
 #header-post {
@@ -1437,6 +1467,11 @@ article .content .caption {
   }
   #footer .footer-right {
     align-self: flex-end;
+  }
+}
+@media screen and (max-width: 350px) {
+  #footer {
+    display: none;
   }
 }
 .pagination {
