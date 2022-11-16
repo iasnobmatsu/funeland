@@ -558,6 +558,9 @@ body {
   min-height: 100%;
   overflow-wrap: break-word;
 }
+.content .about-date {
+  color: #276db0;
+}
 .content p {
   hyphens: auto;
   -moz-hyphens: auto;
@@ -572,14 +575,11 @@ body {
 }
 .content a {
   color: #383838;
-  text-decoration: none;
-  background-image: linear-gradient(transparent, transparent 5px, #383838 5px, #383838);
-  background-position: bottom;
-  background-size: 100% 6px;
-  background-repeat: repeat-x;
+  text-decoration: underline;
 }
 .content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #276db0 4px, #276db0);
+  background-color: #1c4d75;
+  color: #fff;
 }
 .content a.icon {
   background: none;
@@ -1117,6 +1117,13 @@ body {
   margin-bottom: 1rem;
   margin-left: 0;
   list-style-type: none;
+  text-decoration: none;
+  border-left: 3px solid #81d4b4;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+.post-list .post-item a {
+  text-decoration: none;
 }
 .post-list .post-item .meta {
   display: block;
@@ -1125,10 +1132,16 @@ body {
   color: #276db0;
   font-size: 14px;
 }
+.post-list .post-item .meta::after {
+  content: '';
+}
 @media (min-width: 480px) {
   .post-list .post-item {
     display: flex;
     margin-bottom: 5px;
+  }
+  .post-list .post-item a {
+    text-decoration: none;
   }
   .post-list .post-item .meta {
     text-align: left;
