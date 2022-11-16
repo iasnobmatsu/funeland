@@ -5,6 +5,16 @@
     margin-bottom: 1rem
     margin-left: 0
     list-style-type: none
+   
+    text-decoration:none
+    border-left: 3px solid #81d4b4
+    padding-left: 5px
+    margin-top:10px
+    
+    a
+      text-decoration: none;
+     
+      
 
     .meta
       display: block
@@ -12,12 +22,17 @@
       min-width: 100px
       color: $color-meta
       font-size: 14px
+    .meta::after
+       content: ''
 
 @media (min-width: 480px)
   .post-list
     .post-item
       display: flex
       margin-bottom: 5px
+        
+      a
+         text-decoration: none
 
       .meta
         text-align: left
