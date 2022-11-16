@@ -15,13 +15,13 @@
 
   li
     display: inline-block
-    margin-right: 15px
+    margin-right: 10px
     border-right: 1px solid
     border-color: $color-border
     vertical-align: middle
 
     a
-      margin-right: 15px
+      margin-right: 10px
 
   li:last-child
     margin-right: 0
@@ -30,13 +30,18 @@
     a
       margin-right: 0
 
+    
+
   a
     color: $color-meta
-    text-decoration: underline
+    text-decoration: none
     background-image: none
 
   a:hover
-    color: lighten($color-meta, 20%)
+      color: white
+      background-color: none
+
+
 
   .footer-left
     height: 20px
@@ -54,11 +59,14 @@
 
     .footer-left
       align-self: flex-start
-      margin-right: 20px
+      margin-right: 10px
 
     .footer-right
       align-self: flex-end
 
+
 @media screen and (max-width: 350px)
   #footer
     display: none
+  
+  
