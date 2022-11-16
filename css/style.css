@@ -775,6 +775,13 @@ body {
     padding: 0;
     margin: 0.4rem;
   }
+  #header #nav ul li a:hover {
+    background: none;
+    color: inherit;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0.4rem;
+  }
 }
 @media screen and (max-width: 405px) {
   #header {
@@ -805,6 +812,13 @@ body {
     padding: 0;
     margin: 0;
     border: none;
+  }
+  #header #nav ul li a:hover {
+    background: none;
+    color: inherit;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0.4rem;
   }
 }
 #header-post {
