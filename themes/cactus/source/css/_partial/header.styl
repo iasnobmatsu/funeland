@@ -73,34 +73,60 @@
 
 
 @media screen and (max-width: 480px)
-  #header #title
-    display: table
-    margin-right: 5rem
+  #header 
+    a
+      width: 100%
+      #logo 
+        display: table-cell
+        vertical-align: middle
     min-height: $logo-height
-    h1
+    #title
       display: table-cell
       vertical-align: middle
 
   #header #nav
-    ul
-      a:hover
-        background: none
+    ul 
+      display: block
+      list-style-type: disc
+      margin-block-start: 0.5em
+      margin-block-end: 0.5em
+      margin-inline-start: 0px
+      margin-inline-end: 0px
+      padding-inline-start: 0px
 
       li
+        display:inline-block
+        padding: 0
+        margin: 0
+        border: none
+
+
+@media screen and (max-width: 400px)
+  #header 
+    a
+      width: 100%
+      #logo 
         display: none
-        border-right: 0
+        vertical-align: middle
+    min-height: $logo-height
+    #title
+      display: table-cell
+      vertical-align: middle
 
-      li.icon
-        position: absolute
-        top: 77px
-        right: 1rem
-        display: inline-block
+  #header #nav
+    ul 
+      display: block
+      list-style-type: disc
+      margin-block-start: 0.5em
+      margin-block-end: 0.5em
+      margin-inline-start: 0px
+      margin-inline-end: 0px
+      padding-inline-start: 0px
 
-    ul.responsive
       li
-        display: block
+        display:inline-block
+        padding: 0
+        margin: 0
+        border: none
 
-    li:not(:first-child)
-      padding-top: 1rem
-      padding-left: $logo-width + 20px
-      font-size: 1rem
+
