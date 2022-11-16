@@ -445,6 +445,12 @@ body td {
   src: url("../lib/vazir-font/Vazir.eot?#iefix") format('embedded-opentype'), url("../lib/vazir-font/Vazir.woff2") format('woff2'), url("../lib/vazir-font/Vazir.woff") format('woff'), url("../lib/vazir-font/Vazir.ttf") format('truetype');
   font-weight: normal;
 }
+@font-face {
+  font-family: 'NotoS';
+  src: url("../lib/Noto_Serif_SC/NotoSerifSC-Medium.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .search-input {
   font-size: 0.875rem;
   height: 2.75rem;
@@ -544,7 +550,7 @@ body {
   font-display: swap;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "NotoS";
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -1535,7 +1541,7 @@ p.no-result {
   font-display: swap;
   font-weight: 400;
   font-size: 11.200000000000001px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "NotoS";
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
