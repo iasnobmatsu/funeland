@@ -59,7 +59,7 @@
         margin-right: 20px
         border-right: 1.5px dashed
         border-color: $color-accent-1
-        vertical-align: middle
+        vertical-align: baseline
 
       .icon
         display: none
@@ -102,20 +102,24 @@
 
         a
           padding: 0
-          margin: 0.4rem
+          margin-right: 0.8rem
         
         a:hover
           background: none
           color: inherit
           text-decoration: none
           padding:0px
-          margin: 0.4rem
+          margin-right: 0.8rem
+          margin-left: 0
+      li:last-child
+        a:hover
+           margin-right: 0rem
 
 
-@media screen and (max-width: 405px)
+@media screen and (max-width: 413px)
   #header 
     a
-      width: 100%
+      padding:0
       #logo 
         display: none
         vertical-align: middle
@@ -146,7 +150,11 @@
           color: inherit
           text-decoration: none
           padding:0px
-          margin: 0.4rem
+          margin-right: 0.8rem
+          margin-left: 0
+      li:last-child
+        a:hover
+           margin-right: 0rem
          
 
 
