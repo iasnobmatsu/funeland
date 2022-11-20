@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>Using Pandoc for File Conversion</title>
+      <link href="/2022/11/19/017-pandoc/"/>
+      <url>/2022/11/19/017-pandoc/</url>
+      
+        <content type="html"><![CDATA[<p>I wanted to convert a latex article into a markdown blog that can be posted here on this website. After some google search, I came across <a href="https://pandoc.org/MANUAL.html">Pandoc</a> which did what I want. </p><p>After installing Pandoc, the command <code>pandoc -s -o example.tex example.md</code> can be usedto convert a <code>.tex</code> file to a <code>.md</code> file. </p><p>Pandoc can also convert other formats of files including but not limited to Jupyter notebook, HTML, Word docx and more. This may be a very useful tool for now and in the future. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> file conversion </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Music Theory Notes (updated 2022-11-16)</title>
+      <link href="/2022/11/18/016-mtheory/"/>
+      <url>/2022/11/18/016-mtheory/</url>
+      
+        <content type="html"><![CDATA[<p>2022-11-15 </p><p>想写个自己可以用的乐理笔记。最终目标是编曲。</p><p>这份笔记将根据 <a href="https://www.youtube.com/watch?v=ukP7BOd6WOI&amp;list=PLDNPXoSAAaRJ9CoWhCyxeqmKRKvZv0iu4">Music Theory for Guitar</a> 编写。</p><hr><p>latest update: 目前看完了octave.</p><hr><h2 id="Intervals"><a href="#Intervals" class="headerlink" title="Intervals"></a>Intervals</h2><p>half-step (semi-tone): One fret apart. Notes that are a half-step apart are minor 2nd or flat 2.<br>whole-step (whole tone): Two frets apart. Notes thare are a whole-step apart are major 2nd or 2.</p><p>Similarly,</p><div class="table-container"><table><thead><tr><th>interval</th><th>steps apart</th></tr></thead><tbody><tr><td>minor 2nd</td><td>0.5</td></tr><tr><td>major 2nd</td><td>1</td></tr><tr><td>minor 3rd</td><td>1.5</td></tr><tr><td>major 3rd</td><td>2</td></tr><tr><td>perfect 4th</td><td>2.5</td></tr><tr><td>diminished 5th (tritone)</td><td>3</td></tr><tr><td>perfect 5th</td><td>3.5</td></tr><tr><td>augmented 5th, sharp 5, minor/flat 6</td><td>4</td></tr><tr><td>major 6, diminished 7</td><td>4.5</td></tr><tr><td>minor 7</td><td>5</td></tr><tr><td>major 7</td><td>5.5</td></tr><tr><td>octave (8)</td><td>6</td></tr></tbody></table></div><p>An octave is 12 frets apart. </p><p>On a guitar with standard tuning, the notes from the 6th to 1st string are E, A, D, G, B, E. The intervals between strings are 4th (perfect 4th) except between G and B which are 3rd (major 3rd).</p><h3 id="Interval-shapes-on-multiple-strings-on-guitar"><a href="#Interval-shapes-on-multiple-strings-on-guitar" class="headerlink" title="Interval shapes on multiple strings on guitar"></a>Interval shapes on multiple strings on guitar</h3><p>Minor 2nd: 4 frets back on the neighboring higher string</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-1---</span><br><span class="line">-5---</span><br></pre></td></tr></table></figure><p>Major 2nd: 3 frets back on the neighboring higher string</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-2---</span><br><span class="line">-5---</span><br></pre></td></tr></table></figure><p>etc.</p><h3 id="octave-shapes"><a href="#octave-shapes" class="headerlink" title="octave shapes"></a>octave shapes</h3><p>An octave shape can be build using two frets above the current note two strings higher</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-----</span><br><span class="line">-5---</span><br><span class="line">----</span><br><span class="line">-3---</span><br></pre></td></tr></table></figure><p>when the octave is across the second string</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">-6---</span><br><span class="line">-----</span><br><span class="line">-3---</span><br><span class="line">----</span><br><span class="line">-----</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> music </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2022年看的动漫(持续更新中～)</title>
       <link href="/2022/11/17/012-anime2022/"/>
       <url>/2022/11/17/012-anime2022/</url>
@@ -21,31 +73,6 @@
         <tags>
             
             <tag> anime </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Music Theory Notes (updated 2022-11-16)</title>
-      <link href="/2022/11/16/016-mtheory/"/>
-      <url>/2022/11/16/016-mtheory/</url>
-      
-        <content type="html"><![CDATA[<p>2022-11-15 </p><p>想写个自己可以用的乐理笔记。最终目标是编曲。</p><p>这份笔记将根据 <a href="https://www.youtube.com/watch?v=ukP7BOd6WOI&amp;list=PLDNPXoSAAaRJ9CoWhCyxeqmKRKvZv0iu4">Music Theory for Guitar</a> 编写。</p><hr><p>latest update: 目前看完了string intervals.</p><hr><h2 id="Intervals"><a href="#Intervals" class="headerlink" title="Intervals"></a>Intervals</h2><p>half-step (semi-tone): One fret apart. Notes that are a half-step apart are minor 2nd or flat 2.<br>whole-step (whole tone): Two frets apart. Notes thare are a whole-step apart are major 2nd or 2.</p><p>Similarly,</p><div class="table-container"><table><thead><tr><th>interval</th><th>steps apart</th></tr></thead><tbody><tr><td>minor 2nd</td><td>0.5</td></tr><tr><td>major 2nd</td><td>1</td></tr><tr><td>minor 3rd</td><td>1.5</td></tr><tr><td>major 3rd</td><td>2</td></tr><tr><td>perfect 4th</td><td>2.5</td></tr><tr><td>diminished 5th (tritone)</td><td>3</td></tr><tr><td>perfect 5th</td><td>3.5</td></tr><tr><td>augmented 5th, sharp 5, minor/flat 6</td><td>4</td></tr><tr><td>major 6, diminished 7</td><td>4.5</td></tr><tr><td>minor 7</td><td>5</td></tr><tr><td>major 7</td><td>5.5</td></tr><tr><td>octave (8)</td><td>6</td></tr></tbody></table></div><p>An octave is 12 frets apart. </p><p>On a guitar with standard tuning, the notes from the 6th to 1st string are E, A, D, G, B, E. The intervals between strings are 4th (perfect 4th) except between G and B which are 3rd (major 3rd).</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> tools </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> music </tag>
             
         </tags>
       

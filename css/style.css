@@ -1887,3 +1887,7 @@ code {
 .highlight .line {
   height: 22px;
 }
+#post-calendar {
+  width: 100%;
+  height: 200px;
+}
