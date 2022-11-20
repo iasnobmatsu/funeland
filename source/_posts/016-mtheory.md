@@ -1,6 +1,6 @@
 ---
 title: Music Theory Notes (updated 2022-11-16)
-date: 2022-11-16
+date: 2022-11-18
 tags: [music]
 categories: [tools]
 mathjax: true
@@ -14,7 +14,7 @@ mathjax: true
 
 <hr>
 
-latest update: 目前看完了string intervals.
+latest update: 目前看完了octave.
 
 <hr>
 
@@ -47,3 +47,51 @@ An octave is 12 frets apart.
 
 On a guitar with standard tuning, the notes from the 6th to 1st string are E, A, D, G, B, E. The intervals between strings are 4th (perfect 4th) except between G and B which are 3rd (major 3rd).
 
+### Interval shapes on multiple strings on guitar
+
+Minor 2nd: 4 frets back on the neighboring higher string
+
+```
+-----
+-----
+-----
+-----
+-1---
+-5---
+```
+Major 2nd: 3 frets back on the neighboring higher string
+
+```
+-----
+-----
+-----
+-----
+-2---
+-5---
+```
+
+etc.
+
+### octave shapes
+
+An octave shape can be build using two frets above the current note two strings higher
+
+```
+-----
+-----
+-----
+-5---
+----
+-3---
+```
+
+when the octave is across the second string
+
+```
+-----
+-6---
+-----
+-3---
+----
+-----
+```
