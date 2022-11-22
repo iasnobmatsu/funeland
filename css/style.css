@@ -1891,3 +1891,6 @@ code {
   width: 100%;
   height: 200px;
 }
+.post-count {
+  display: block;
+}
