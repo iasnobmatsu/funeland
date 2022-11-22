@@ -12,3 +12,4 @@ After installing Pandoc, the command `pandoc -s -o example.tex example.md` can b
 
 Pandoc can also convert other formats of files including but not limited to Jupyter notebook, HTML, Word docx and more. This may be a very useful tool for now and in the future. 
 
+
