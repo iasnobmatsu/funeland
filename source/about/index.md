@@ -3,7 +3,6 @@ title: About
 date: 2022-11-05 13:45:12
 ---
 
-## (Not) Highlights
 
 <div>
     <div class="dot"></div>

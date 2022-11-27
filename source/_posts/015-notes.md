@@ -1,7 +1,7 @@
 ---
 title: 今年的第一场雪
 date: 2022-11-12
-tags: [music, life]
+tags: [music, thoughts]
 categories:  [enjoy]
 ---
 

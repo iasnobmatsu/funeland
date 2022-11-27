@@ -200,3 +200,4 @@ cdn:
   justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js
 
 
+pangu: true
