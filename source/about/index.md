@@ -15,4 +15,4 @@ date: 2022-11-05 13:45:12
 
 <hr>
 
-感谢朋友[Stan7s](https://stan7s.github.io/blog/)与我的博客交流。
+
