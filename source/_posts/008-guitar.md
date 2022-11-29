@@ -1,8 +1,10 @@
 ---
 title: 吉他学习资料
 date: 2022-11-08 19:09:22
+updated: 2022-11-29
 tags: [music, guitar]
 categories: [hobbies]
+description: 一些有用的因特网吉他内容。
 ---
 
 ## 教学及曲谱
@@ -11,6 +13,8 @@ categories: [hobbies]
 
 - [GuitarZero2Hero](https://www.youtube.com/c/GuitarZero2Hero)的油管频道
     - 超级好用！有tab谱并且可以跟着练。有很多RHCP。
+- [Steven Law Guitar](https://stevenlawguitar.com/category/music/)
+    - 非常多的曲谱，很仔细并且可以直接下载
 - [布魯飛斯與鐵人](https://www.youtube.com/channel/UC-FXgMWAzXMRbayS9MhVxDA)的油管频道
     - 有很多indie/rock的tab(康斯坦，傻白 etc.)
 - [音樂人阿村Acun](https://www.youtube.com/c/JoyBuskerStudio)的油管频道

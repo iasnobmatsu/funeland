@@ -1,9 +1,11 @@
 ---
 title: Web Scraping with Python Using MyAnimeList as An Example
 date: 2020-12-30
+updated: 2020-12-30
 categories: 
 - [projects]
 tags: [web scraping]
+description: Using BeautifulSoup and pandas to scrape and clean web data.
 ---
 
 

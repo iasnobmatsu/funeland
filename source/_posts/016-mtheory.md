@@ -1,9 +1,11 @@
 ---
 title: Music Theory Notes (updated 2022-11-16)
-date: 2022-11-18
+date: 2022-11-14
+updated: 2022-11-18
 tags: [music]
 categories: [tools]
 mathjax: true
+description: 碎片式学习的一些乐理知识。
 ---
 
 2022-11-15 

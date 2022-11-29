@@ -1,10 +1,12 @@
 ---
 title: Content-Aware Image Resizing
 date: 2021-05-08
+updated: 2021-05-08
 mathjax: true
 categories: 
  - [projects]
 tags: [computational photography, matlab]
+description: Final project for the class Computational Photography (Seam Carving and Insertion).
 ---
 
 ### Seam Carving And Insertion

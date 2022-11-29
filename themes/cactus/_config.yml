@@ -201,3 +201,6 @@ cdn:
 
 
 pangu: true
+
+breadcrumb:
+  display: true

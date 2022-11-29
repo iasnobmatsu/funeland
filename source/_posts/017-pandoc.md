@@ -1,9 +1,11 @@
 ---
 title: Using Pandoc for File Conversion
 date: 2022-11-19
+updated: 2022-11-19
 tags: [markdown, file conversion]
 categories: [tools]
 mathjax: true
+description: I wanted to convert a latex article into a markdown blog that can be posted here on this website. After some google search, I came across Pandoc which did what I want. 
 ---
 
 I wanted to convert a latex article into a markdown blog that can be posted here on this website. After some google search, I came across [Pandoc](https://pandoc.org/MANUAL.html) which did what I want. 

@@ -1,9 +1,11 @@
 ---
 title: How to Build Your Own Blog Using Hexo and GitHub Pages (Mac, 2022)
 date: 2022-11-07 14:51:09
+updated: 2022-11-07
 tags: [blog, hexo]
 categories: [tools]
 mathjax: true
+description: Building a blog using hexo.
 ---
 
 ### Before We Begin
