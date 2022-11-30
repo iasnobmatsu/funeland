@@ -2470,6 +2470,7 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   margin-top: 20px;
   padding: 20px 24px;
+  border-left: 3px solid #49b1f5;
 }
 #aside-content .card-info .author-info__name {
   font-weight: 500;
@@ -3173,7 +3174,7 @@ h1.page-title + .tag-cloud-list {
 #footer-wrap {
   position: relative;
   padding: 20px 10px;
-  color: #858585;
+  color: #eee;
   text-align: center;
 }
 #footer-wrap a {
@@ -5573,7 +5574,7 @@ blockquote.pullquote.right {
   padding: 5px 14px;
   width: 100%;
   outline: none;
-  border: 2px solid #49b1f5;
+  border: 1px solid #49b1f5;
   border-radius: 40px;
   background: var(--search-bg);
   color: var(--search-input-color);
