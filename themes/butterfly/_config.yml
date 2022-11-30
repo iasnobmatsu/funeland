@@ -52,7 +52,8 @@ algolia_search:
 local_search:
   enable: true
   preload: false
-  CDN:
+  CDN: 
+
 
 # Math (數學)
 # --------------------------------------
@@ -672,7 +673,7 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: And if the dam breaks open many years too soon ... I'll see you on the dark side of the moon.
+    content: Oh Diane 像你這麼世故的女生 會不會寧可自己有一點笨 不要把別人的缺陷 當成是你的責任
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -838,7 +839,7 @@ instantpage: false
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (圖片懶加載)
@@ -958,3 +959,7 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+
+
+
+

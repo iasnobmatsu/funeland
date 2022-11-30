@@ -56,7 +56,8 @@ aside:
   articles: Articles
   tags: Tags
   categories: Categories
-  card_announcement: aaa
+  card_announcement: Lyrics
+  card_calendar: Calender
   card_categories: Categories
   card_tags: Tags
   card_archives: Archives
@@ -81,7 +82,7 @@ aside:
     image: image
     link: link
     code: code
-  card_toc: Catalog
+  card_toc: TOC
 
 date_suffix:
   just: Just
