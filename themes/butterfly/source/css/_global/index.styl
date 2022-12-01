@@ -212,8 +212,11 @@ blockquote
   border-left: 3px solid $blockquote-padding-color
   background-color: var(--blockquote-bg)
   color: var(--blockquote-color)
+  box-shadow: 5px 3px 3px lighten($blockquote-color,50%) ;
 
+ 
   footer
+    color: black
     cite
       &:before
         padding: 0 5px
@@ -221,3 +224,10 @@ blockquote
 
   & > :last-child
     margin-bottom: 0 !important
+
+blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
