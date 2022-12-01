@@ -36,7 +36,9 @@ description: Music I listened to this year according to Spotify. And some of thi
 - 多依靠家人和朋友一些吧，不要做美丽世界的孤儿。
 - 要开心。
 
+<div style='display:flex; flex-wrap:wrap; justify-content:space-around'>
+<img src="spotify2022.jpg" width=250>
+<img src="wrapped-personality.JPG" width=250>
+<img src="wrapped-genre.JPG" width=250>
+</div>
 
-![wrapped2022](spotify2022.jpg)
-![wrapped2022](wrapped-personality.JPG)
-![wrapped2022](wrapped-genre.JPG)
