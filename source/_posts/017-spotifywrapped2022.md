@@ -38,3 +38,5 @@ description: Music I listened to this year according to Spotify. And some of thi
 
 
 ![wrapped2022](spotify2022.jpg)
+![wrapped2022](wrapped-personality.JPG)
+![wrapped2022](wrapped-genre.JPG)
