@@ -1350,8 +1350,8 @@ canvas:not(#ribbon-canvas),
   --dark-grey: #cacaca;
   --white: #fff;
   --text-highlight-color: #1f2d3d;
-  --blockquote-color: #6a737d;
-  --blockquote-bg: rgba(73,177,245,0.1);
+  --blockquote-color: #636363;
+  --blockquote-bg: rgba(80,199,165,0.1);
   --reward-pop: #f5f5f5;
   --toc-link-color: #666261;
   --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.05);
@@ -1527,9 +1527,14 @@ img:not([src]) {
 blockquote {
   margin: 0 0 20px;
   padding: 12px 15px;
-  border-left: 3px solid #49b1f5;
+  border-left: 3px solid #50c7a5;
   background-color: var(--blockquote-bg);
   color: var(--blockquote-color);
+  -webkit-box-shadow: 5px 3px 3px #b1b1b1;
+  box-shadow: 5px 3px 3px #b1b1b1;
+}
+blockquote footer {
+  color: #000;
 }
 blockquote footer cite:before {
   padding: 0 5px;
@@ -1537,6 +1542,12 @@ blockquote footer cite:before {
 }
 blockquote > :last-child {
   margin-bottom: 0 !important;
+}
+blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px;
 }
 :root {
   --hl-color: #90a4ae;
@@ -2285,7 +2296,7 @@ figure.highlight pre .javascript .function {
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  height: 18em;
+  height: 13em;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
