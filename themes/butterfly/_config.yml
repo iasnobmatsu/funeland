@@ -673,7 +673,7 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: Oh Diane 像你這麼世故的女生 會不會寧可自己有一點笨 不要把別人的缺陷 當成是你的責任
+    content: 雨 一直下个不停 灌满这空空的努力 也没有人在意
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
