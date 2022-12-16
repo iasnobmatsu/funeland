@@ -1,11 +1,15 @@
 ---
 title: 想做一个JOJO的Color Palette
 date: 2022-12-05
-updated: 2022-12-07
+updated: 2022-12-15
 tags: [anime, thoughts, R]
 categories: [projects]
 description: 如题
 ---
+
+## 2022-12-15
+
+几天前完成了1-6代JoJo的色盘。以后有机会加别的人物以及替身使者。
 
 ## 2022-12-05
 
