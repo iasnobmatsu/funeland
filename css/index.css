@@ -1885,6 +1885,9 @@ figure.highlight pre .javascript .function {
     filter: alpha(opacity=60);
   }
 }
+#archive {
+  border-radius: 0;
+}
 .article-sort {
   margin-left: 10px;
   padding-left: 20px;
@@ -2022,6 +2025,9 @@ figure.highlight pre .javascript .function {
   -ms-flex: 1;
   flex: 1;
   padding: 0 16px;
+}
+#page {
+  border-radius: 0;
 }
 .category-lists .category-title {
   font-size: 2.57em;
@@ -2281,7 +2287,8 @@ figure.highlight pre .javascript .function {
   font-size: 1.5em;
 }
 #recent-posts > .recent-post-item:not(:first-child) {
-  margin-top: 20px;
+  margin-top: 0px;
+  border-top: 2px solid #eee;
 }
 #recent-posts > .recent-post-item {
   display: -webkit-box;
@@ -2303,7 +2310,14 @@ figure.highlight pre .javascript .function {
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  height: 13em;
+  height: 10em;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#recent-posts > .recent-post-item:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
@@ -2315,13 +2329,6 @@ figure.highlight pre .javascript .function {
     flex-direction: column;
     height: auto;
   }
-}
-#recent-posts > .recent-post-item:hover img.post_bg {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
 }
 #recent-posts > .recent-post-item.ads-wrap {
   display: block !important;
@@ -2488,7 +2495,7 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   margin-top: 20px;
   padding: 20px 24px;
-  border-left: 3px solid #49b1f5;
+  border-radius: 0;
 }
 #aside-content .card-info .author-info__name {
   font-weight: 500;
@@ -4074,7 +4081,7 @@ h1.page-title + .tag-cloud-list {
   margin-bottom: 5px;
   width: 35px;
   height: 35px;
-  border-radius: 5px;
+  border-radius: 0px;
   background-color: var(--btn-bg);
   color: var(--btn-color);
   text-align: center;
@@ -5583,6 +5590,9 @@ blockquote.pullquote.right {
   display: none;
   background: rgba(0,0,0,0.6);
 }
+#local-search .search-dialog {
+  border-radius: 0;
+}
 #local-search .search-dialog .local-search-box {
   margin: 0 auto;
   max-width: 100%;
@@ -5593,7 +5603,7 @@ blockquote.pullquote.right {
   width: 100%;
   outline: none;
   border: 1px solid #49b1f5;
-  border-radius: 40px;
+  border-radius: 2px;
   background: var(--search-bg);
   color: var(--search-input-color);
   -webkit-appearance: none;
