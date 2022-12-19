@@ -1,6 +1,7 @@
 #recent-posts
   & > .recent-post-item:not(:first-child)
-    margin-top: 20px
+    margin-top: 0px
+    border-top: 2px solid $light-grey
 
   & > .recent-post-item
     @extend .cardHover
@@ -8,15 +9,15 @@
     flex-direction: row
     align-items: center
     overflow: hidden
-    height: 13em
+    height: 10em
+    border-radius:0
+    box-shadow:none
+    &:hover
+      box-shadow:none
 
     +maxWidth768()
       flex-direction: column
       height: auto
-
-    &:hover
-      img.post_bg
-        transform: scale(1.1)
 
     &.ads-wrap
       display: block !important
