@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Algorithmic Trading Using Python Notes</title>
+      <link href="/2023/01/01/026-ATPnotes/"/>
+      <url>/2023/01/01/026-ATPnotes/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Section-1-Algorithmic-Trading-Fundamentals"><a href="#Section-1-Algorithmic-Trading-Fundamentals" class="headerlink" title="Section 1: Algorithmic Trading Fundamentals"></a>Section 1: Algorithmic Trading Fundamentals</h2><p>Algorithmic trading means using computers to make investment decisions.</p><h4 id="Algorithmic-Trading-Landscape"><a href="#Algorithmic-Trading-Landscape" class="headerlink" title="Algorithmic Trading Landscape"></a>Algorithmic Trading Landscape</h4><ul><li>Renaissance Technology</li><li>AQR Capital Management</li><li>Citadel Security</li></ul><h4 id="Algorithmic-Trading-and-Python"><a href="#Algorithmic-Trading-and-Python" class="headerlink" title="Algorithmic Trading and Python"></a>Algorithmic Trading and Python</h4><ul><li>Python is most popular for algorithmic trading</li><li>Python can be slow, call functions from libraries written in other languages (e.g., Numpy)</li></ul><h4 id="Algorithmic-Trading-Process"><a href="#Algorithmic-Trading-Process" class="headerlink" title="Algorithmic Trading Process"></a>Algorithmic Trading Process</h4><ol><li>collect data</li><li>develop a hypothesis for a strategy</li><li>backtest that strategy </li><li>implement the strategy in production</li></ol><p>backtest: formulate the strategy, see how it would have performed historically over time</p><ul><li>take the strategy back as far in time as one can</li><li>across as many markets as one can </li><li>example: hypothesis is that the largest firm outperforms. Should test this back in time in the U.S. and also in other countries such as Canada and Japan.</li></ul><h2 id="Section-2-Course-Configuration-amp-API-Application-Programming-Interface-basics"><a href="#Section-2-Course-Configuration-amp-API-Application-Programming-Interface-basics" class="headerlink" title="Section 2: Course Configuration &amp; API (Application Programming Interface) basics"></a>Section 2: Course Configuration &amp; API (Application Programming Interface) basics</h2><p>API is a way to let your software interact with others’ software. This class will use the IEX Cloud API (only GET requests).</p><ul><li>GET: receive data from API</li><li>POST: push data to API</li><li>PUT: add and overwrite data to API</li><li>DELETE: delete data from API</li></ul><p><a href="https://github.com/public-apis/public-apis">list of public APIs</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> quantitative finance </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2022 年终总结</title>
       <link href="/2022/12/31/025-20221231/"/>
       <url>/2022/12/31/025-20221231/</url>
