@@ -2,8 +2,8 @@
 title: 寒假看的一些剧
 date: 2023-01-15
 updated: 2023-01-15
-tags: [enjoy]
-categories: [thoughts]
+tags: [thoughts] 
+categories: [enjoy]
 description: 是谁2023年才看完神探伽利略?
 ---
 
