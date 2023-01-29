@@ -98,9 +98,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
-
+theme: 3-hexo
 plugins: hexo-math
+
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -137,7 +138,7 @@ social_links: false
 
 copyright:
   start_year: 2022
-  end_year: 2022
+  end_year: 2023
 
 search: true
 page.search: true
