@@ -1599,13 +1599,36 @@
 #post .article_copyright a:hover {
   text-decoration: underline;
 }
+@font-face {
+  font-style: normal;
+  font-family: "Vazir";
+  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../lib/vazir-font/Vazir.eot");
+  src: url("../lib/vazir-font/Vazir.eot?#iefix") format('embedded-opentype'), url("../lib/vazir-font/Vazir.woff2") format('woff2'), url("../lib/vazir-font/Vazir.woff") format('woff'), url("../lib/vazir-font/Vazir.ttf") format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'NotoS';
+  src: url("../lib/Noto_Serif_SC/NotoSerifSC-Medium.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+#post {
+  font-family: "NotoS";
+}
+code {
+  font-family: monospace;
+}
 html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   color: #283444;
-  font: 400 16px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
+  font: 400 14px/1 "NotoS";
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: none;
   overflow: hidden;
@@ -1750,10 +1773,27 @@ img.pswp__img {
 .mobile-menus .dynamic-menu:nth-child(1) {
   margin-top: 0;
 }
+@font-face {
+  font-style: normal;
+  font-family: "Vazir";
+  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Vazir;
+  src: url("../lib/vazir-font/Vazir.eot");
+  src: url("../lib/vazir-font/Vazir.eot?#iefix") format('embedded-opentype'), url("../lib/vazir-font/Vazir.woff2") format('woff2'), url("../lib/vazir-font/Vazir.woff") format('woff'), url("../lib/vazir-font/Vazir.ttf") format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'NotoS';
+  src: url("../lib/Noto_Serif_SC/NotoSerifSC-Medium.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 @media screen and (max-width: 1468px) {
   html,
   body {
-    font: 400 15px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
+    font: 400 13px/1 "NotoS";
   }
   .nav {
     width: 492px;
