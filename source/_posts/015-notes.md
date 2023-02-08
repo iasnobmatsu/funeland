@@ -1,8 +1,8 @@
 ---
-title: 今年的第一场雪
+title: 时不时的听歌有感1
 date: 2022-11-12
 updated: 2022-11-12
-tags: [music, thoughts]
+tags: [music, thoughts, 听歌有感]
 categories:  [enjoy]
 description: 今天下雪了。今年的第一场雪，夹杂在雨里，砸在我心上。忍不住又开始想，什么时候可以逃离这个地方。
 ---

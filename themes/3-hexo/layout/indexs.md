@@ -6,23 +6,18 @@
 
 Carpe diem.
 
-<hr>
+<blockquote style="font-family:'NotoS'">
+<pre style="font-family:'NotoS'">
+Oh, sing with me, sing for the year
+Sing for the laughter, and sing for the tear
+Sing it with me, if it's just for today
+Maybe tomorrow, the good Lord will take you away
+</pre>
+</blockquote>
 
-## 最近沉迷的歌 
+来自Aerosmith乐队的[Dream On](https://www.youtube.com/watch?v=NeSpx7vZifc). 
 
-黑暗的尽头 - Crispy脆乐团
+看了很多Steven Tyler (Aerosmith)和Ann Wilson (Heart)的视频。希望我老了以后也能继续做自己热爱的事。
 
-把雙手交給我 把眼淚交給我
-
-在宇宙的角落一起走到黑暗的盡頭
-
-別害怕低下頭 我會在你身後
-
-就算沒變成永垂不朽
-
-至少有你和我一起走
-
-黑暗的盡頭 是你和我
-
-
+ 
 
