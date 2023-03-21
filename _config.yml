@@ -107,7 +107,7 @@ plugins: hexo-math
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/iasnobmatsu/iasnobmatsu.github.io.git
+  repo: https://github.com/iasnobmatsu/funeland.git
   branch: main
   message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
 
