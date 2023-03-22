@@ -108,7 +108,7 @@ plugins: hexo-math
 deploy:
   type: git
   repo: https://github.com/iasnobmatsu/funeland.git
-  branch: main
+  branch: gh-pages
   message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
 
 # MathJax  
