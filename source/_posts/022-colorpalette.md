@@ -1,10 +1,11 @@
 ---
-title: JOJO themed R Color Palette
+title: Jojo themed R Color Palette
 date: 2022-12-05
 updated: 2022-12-15
-tags: [anime, thoughts, R]
+tags: [R, anime]
 categories: [projects]
-description: 如题
+description: Inspired by Harry Potter color palettes, this is an R palette based on Jojo's Bizzare Adventure characters.
+top: true
 ---
 
 ## 2022-12-15

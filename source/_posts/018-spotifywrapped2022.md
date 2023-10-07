@@ -5,6 +5,7 @@ updated: 2022-11-30
 tags: [music, thoughts]
 categories: [enjoy]
 description: Music I listened to this year according to Spotify. And some of this year's reflections.
+top: true
 ---
 
 ## Mood
