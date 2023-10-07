@@ -1354,8 +1354,10 @@ canvas:not(#ribbon-canvas),
   --blockquote-bg: rgba(80,199,165,0.1);
   --reward-pop: #f5f5f5;
   --toc-link-color: #666261;
-  --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.05);
-  --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
+/*
+  --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .05)
+  --card-hover-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .09)
+  */
   --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #49b1f5;
@@ -2282,7 +2284,7 @@ figure.highlight pre .javascript .function {
   font-size: 1.5em;
 }
 #recent-posts > .recent-post-item:not(:first-child) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #recent-posts > .recent-post-item {
   display: -webkit-box;
@@ -2304,7 +2306,10 @@ figure.highlight pre .javascript .function {
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  height: 12em;
+  height: 15em;
+  border-radius: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px #000 solid;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
@@ -2457,7 +2462,11 @@ h1.page-title + .tag-cloud-list {
   text-align: left;
 }
 #aside-content {
-  width: 35%;
+  width: 30%;
+  border-left: 2px solid #000;
+  margin-left: 5%;
+  -webkit-box-shadow: -10px 0px 0px 1px #c9c9c9;
+  box-shadow: -10px 0px 0px 1px #c9c9c9;
 }
 @media screen and (min-width: 900px) {
   #aside-content {
