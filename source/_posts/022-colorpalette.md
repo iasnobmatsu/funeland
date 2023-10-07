@@ -1,5 +1,5 @@
 ---
-title: 想做一个JOJO的Color Palette
+title: JOJO themed R Color Palette
 date: 2022-12-05
 updated: 2022-12-15
 tags: [anime, thoughts, R]

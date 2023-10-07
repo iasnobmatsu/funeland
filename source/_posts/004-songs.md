@@ -2,9 +2,9 @@
 title: Personal Favorites of Chinese Rock/Indie Music（一些我听的乐队）
 date: 2022-11-05 
 updated: 2022-11-05 
-tags: [music]
+tags: [enjoy]
 categories: 
-    - [reviews]
+    - [enjoy]
 hidden: false
 description: 关于我听的歌。
 ---

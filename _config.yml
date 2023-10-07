@@ -4,11 +4,11 @@
 
 
 # Site
-title: A Blog From Nowhere
+title: Funeland
 subtitle: ''
 description: ''
 keywords:
-author: iasnobmatsu
+author: Fune
 language: en
 timezone: ''
 
@@ -45,12 +45,11 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
+  hljs: true
   enable: true
-  line_number: true
-  auto_detect: false
+  line_number: false
+  auto_detect: true
   tab_replace: ''
-  wrap: true
-  hljs: false
 prismjs:
   enable: false
   preprocess: true
@@ -98,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: 3-hexo
+theme: butterfly
 plugins: hexo-math
 
 

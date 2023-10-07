@@ -3,7 +3,7 @@ title: 吉他学习资料
 date: 2022-11-08 19:09:22
 updated: 2022-11-29
 tags: [music, guitar]
-categories: [hobbies]
+categories: [tools]
 description: 一些有用的因特网吉他内容。
 ---
 

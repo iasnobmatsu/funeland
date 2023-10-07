@@ -3,7 +3,7 @@ title: 石之海观后感
 date: 2022-12-02
 updated: 2022-12-02
 tags: [anime, thoughts]
-categories: [reviews]
+categories: [enjoy]
 description: 2022年12月1日。追平了石之海也知道了完整的故事。一些感想。
 ---
 
