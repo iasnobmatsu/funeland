@@ -41,11 +41,3 @@ description: 一些有用的因特网吉他内容。
 - Gibson Les Paul Standard '50s in Heritage Cherry Sunburst. 太美丽了。哭泣。[图片链接](https://www.gibson.com/en-US/Electric-Guitar/USAUBC849/Heritage-Cherry-Sunburst)
 - Foldable Travel Guitar. 看上去是可以走到哪里都带着的样子。适合流浪用。[图片链接](https://www.asmuse.com/products/asmuse-foldable-travel-headless-electric-guitar-with-built-in-headphone)
 
-{% blockquote 本人 %}
- 啊， 好想弹吉他。
- 不行啊，还有工作，还要学习，还要面对惨淡的生活。
- ...
- 好吧。
-{% endblockquote  %}
-
-

@@ -6,6 +6,7 @@ categories:
 - [projects]
 tags: [web scraping]
 description: Using BeautifulSoup and pandas to scrape and clean web data.
+cover: 003.png
 ---
 
 

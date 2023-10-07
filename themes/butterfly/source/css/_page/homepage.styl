@@ -1,6 +1,6 @@
 #recent-posts
   & > .recent-post-item:not(:first-child)
-    margin-top: 20px
+    margin-top: 10px
 
 
   & > .recent-post-item
@@ -9,7 +9,10 @@
     flex-direction: row
     align-items: center
     overflow: hidden
-    height: 12em
+    height: 15em
+    border-radius: 0
+    padding-bottom: 10px
+    border-bottom: 1px black solid
 
     +maxWidth768()
       flex-direction: column

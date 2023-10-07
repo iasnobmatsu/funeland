@@ -6,6 +6,7 @@ tags: [blog, hexo]
 categories: [tools]
 mathjax: true
 description: Building a blog using hexo.
+cover: tags.png
 ---
 
 ### Before We Begin

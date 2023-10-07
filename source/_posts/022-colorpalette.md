@@ -6,6 +6,7 @@ tags: [R, anime]
 categories: [projects]
 description: Inspired by Harry Potter color palettes, this is an R palette based on Jojo's Bizzare Adventure characters.
 top: true
+cover: unnamed-chunk-2-1.png
 ---
 
 ## 2022-12-15

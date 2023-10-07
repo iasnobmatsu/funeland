@@ -7,6 +7,7 @@ categories:
  - [projects]
 tags: [computational photography, matlab]
 description: Final project for the class Computational Photography (Seam Carving and Insertion).
+cover: set4_original.jpg
 ---
 
 ### Seam Carving And Insertion
