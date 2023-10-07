@@ -10,7 +10,7 @@ menu:
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  Links: /link/ || fas fa-link
+  # Links: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
@@ -660,7 +660,7 @@ aside:
   mobile: true # display on mobile
   position: right # left or right
   display:
-    archive: true
+    archive: false
     tag: true
     category: true
   card_author:
@@ -672,10 +672,10 @@ aside:
       text: Follow Me
       link: https://github.com/xxxxxx
   card_announcement:
-    enable: true
+    enable: false
     content: 避开大家无聊之中勉勉强强的热闹 开发自己能够得到孤独中的欢笑 不想再去唠唠叨叨...没完没了
   card_recent_post:
-    enable: true
+    enable: false
     limit: 3 # if set 0 will show all
     sort: updated # date or updated
     sort_order: # Don't modify the setting unless you know how it works
@@ -691,8 +691,8 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
     enable: true
-    type: monthly # yearly or monthly
-    format: MMMM YYYY # eg: YYYY年MM月
+    type: yearly # yearly or monthly
+    format: YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 10 # if set 0 will show all
     sort_order: # Don't modify the setting unless you know how it works
