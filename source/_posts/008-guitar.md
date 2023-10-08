@@ -5,6 +5,7 @@ updated: 2022-11-29
 tags: [music, guitar]
 categories: [tools]
 description: 一些有用的因特网吉他内容。
+cover: guitar.png
 ---
 
 ## 教学及曲谱

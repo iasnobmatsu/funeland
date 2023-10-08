@@ -5,6 +5,7 @@ updated: 2022-12-02
 tags: [anime, thoughts]
 categories: [enjoy]
 description: 2022年12月1日。追平了石之海也知道了完整的故事。一些感想。
+cover: d4.jpg
 ---
 
 {% blockquote 空条徐伦 https://www.bilibili.com/read/cv5446150 石之海%}
