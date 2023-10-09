@@ -5,7 +5,7 @@ updated: 2022-11-29
 tags: [music, guitar]
 categories: [tools]
 description: 一些有用的因特网吉他内容。
-cover: guitar.png
+cover: guitar.png 
 ---
 
 ## 教学及曲谱
@@ -22,7 +22,7 @@ cover: guitar.png
 - [有谱么](https://yoopu.me/start?mode=startup)
     - 可以在ipad/手机上下载的app，还有蛮多弹唱谱子的
 - 微信公众号：岛屿吉他，大树音乐屋
-    - 很多谱！
+    - 很多谱
 
 ### 可能有用吧
 
