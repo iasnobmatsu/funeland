@@ -10,7 +10,7 @@ cover: guitar.png
 
 ## 教学及曲谱
 
-### 超赞！
+### 超赞
 
 - [GuitarZero2Hero](https://www.youtube.com/c/GuitarZero2Hero)的油管频道
     - 超级好用！有tab谱并且可以跟着练。有很多RHCP。
