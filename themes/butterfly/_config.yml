@@ -3,9 +3,9 @@
 # --------------------------------------
 
 menu:
+  About: /about/ || fas fa-user
   Posts: / || fas fa-clock
   Projects: /categories/projects || fas fa-folder-open
-  About: /about/ || fas fa-user
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   # Categories: /categories/ || fas fa-folder-open
@@ -36,8 +36,10 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://github.com/iasnobmatsu|| Github
+  fas fa-envelope: mailto:xuclara98@gmail.com || Email
+  fab fa-linkedin-in: https://linkedin.com/ziqianxu|| Linkedin
+  fab fa-researchgate: https://www.researchgate.net/profile/Ziqian-Xu-10/research|| ResearchGate
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -607,7 +609,7 @@ font:
   global-font-size: 15px
   code-font-size:
   font-family: NotoS
-  code-font-family: 
+  code-font-family: courier
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
