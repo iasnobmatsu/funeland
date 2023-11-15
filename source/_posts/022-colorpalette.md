@@ -1,5 +1,5 @@
 ---
-title: Jojo themed R Color Palette
+title: JJBA themed R Color Palette
 date: 2022-12-05
 updated: 2022-12-15
 tags: [R, anime]
