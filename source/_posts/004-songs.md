@@ -17,6 +17,21 @@ cover: spotify2022.jpg
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4HO9jbN3WmEhXKF8GrjPIV?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
+### 2023-11-15
+
+EMO时刻随着冬天一起来到
+
+{% blockquote %}
+
+所有那漫长的疯狂的爱 
+经过后是如此短暂
+所有坚强的脆弱的承担
+期盼彼岸
+
+{% endblockquote %}
+
+
+
 ### 2023-10-26
 
 本周翻回去看了07-GHOST，片尾曲好好听（泪目）

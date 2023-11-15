@@ -607,7 +607,7 @@ beautify:
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
   global-font-size: 15px
-  code-font-size:
+  code-font-size: 12px
   font-family: NotoS
   code-font-family: courier
 
