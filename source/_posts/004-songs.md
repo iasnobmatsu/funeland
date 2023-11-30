@@ -1,7 +1,7 @@
 ---
 title: Music Thoughts（听歌有感）
 date: 2022-11-05 
-updated: 2023-10-05 
+updated: 2023-11-30 
 tags: [enjoy]
 categories: 
     - [enjoy]
@@ -16,6 +16,14 @@ cover: spotify2022.jpg
 大概会重复听的歌都在这个[Spotify 歌单](https://open.spotify.com/playlist/3P07vHgIgWP9HoH1g3Q5xT?si=e543d4ff403e4152)里面。
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4HO9jbN3WmEhXKF8GrjPIV?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+### 2023-11-30
+
+时隔一年的spotify wrapped. 
+
+<div style='display:flex; flex-wrap:wrap; justify-content:space-around'>
+<img src="spotify2023.jpg" width=250>
+</div>
 
 ### 2023-11-15
 
