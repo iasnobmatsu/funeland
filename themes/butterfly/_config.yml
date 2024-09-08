@@ -3,7 +3,7 @@
 # --------------------------------------
 
 menu:
-  About: /about/ || fas fa-user
+  # About: /about/ || fas fa-user
   Posts: / || fas fa-clock
   Projects: /categories/projects || fas fa-folder-open
   Archives: /archives/ || fas fa-archive
@@ -37,9 +37,9 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/iasnobmatsu|| Github
-  fas fa-envelope: mailto:xuclara98@gmail.com || Email
-  fab fa-linkedin-in: https://linkedin.com/ziqianxu|| Linkedin
-  fab fa-researchgate: https://www.researchgate.net/profile/Ziqian-Xu-10/research|| ResearchGate
+  # fas fa-envelope: mailto:xuclara98@gmail.com || Email
+  # fab fa-linkedin-in: https://linkedin.com/ziqianxu|| Linkedin
+  # fab fa-researchgate: https://www.researchgate.net/profile/Ziqian-Xu-10/research|| ResearchGate
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
