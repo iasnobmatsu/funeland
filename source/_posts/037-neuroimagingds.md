@@ -11,8 +11,6 @@ top: true
 ---
 
 
-Before I start to write, I promise to make no promise on whether I can complete this or not but will try. 
-
 # Resources
 
 #### Tools
@@ -31,7 +29,16 @@ Before I start to write, I promise to make no promise on whether I can complete 
 - [Functional Neuroimaging Analysis in Python](https://carpentries-incubator.github.io/SDC-BIDS-fMRI/index.html): web tutorial
 
 
-# Processing MRI data in Python 
+# MRI Analysis in Python (Notes)
 
-next step: read [this kaggle notebook](https://www.kaggle.com/code/kiroyoussef/capstone-preprocessing) on preprocessing fmri data, and learn how to analyze MRI data in Python.  
+Notes for materials from [the pybrain workshop](https://github.com/miykael/workshop_pybrain) and [this youtube video](https://www.youtube.com/watch?v=4FVGn8vodkc).
+ 
+
+Two main packages used for analyzing MRI data in Python are [Nibabel](https://github.com/nipy/nibabel) and [Nilearn](https://nilearn.github.io/stable/index.html).
+- Nibabel: saving and loading MRI data
+- Nilearn: statistical learning with MRI data
+
+### Using Nibabel to Inspect Images
+
+The pacakge Nibable can be loaded using `import nibabel as nb`
 
