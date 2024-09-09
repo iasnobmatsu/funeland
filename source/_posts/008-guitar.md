@@ -6,6 +6,7 @@ tags: [music, guitar]
 categories: [tools]
 description: 一些有的学吉他内容。
 cover: guitar.png 
+hidden: true
 ---
 
 ## 教学及曲谱
